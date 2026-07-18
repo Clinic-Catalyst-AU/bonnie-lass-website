@@ -16,6 +16,27 @@
 // -----------------------------------------------------------------------------
 
 window.GALLERY_ITEMS = [
+  {
+    before: "img/placeholder-01-before.jpg",
+    after:  "img/placeholder-01-after.jpg",
+    meta:   "Placeholder case",
+    title:  "Mid-face and cheeks",
+    note:   "Placeholder only. Tracey's real client photos, published with written consent, replace these."
+  },
+  {
+    before: "img/placeholder-02-before.jpg",
+    after:  "img/placeholder-02-after.jpg",
+    meta:   "Placeholder case",
+    title:  "Skin quality and firmness",
+    note:   "Placeholder only. Tracey's real client photos, published with written consent, replace these."
+  },
+  {
+    before: "img/placeholder-03-before.jpg",
+    after:  "img/placeholder-03-after.jpg",
+    meta:   "Placeholder case",
+    title:  "Jawline and lower face",
+    note:   "Placeholder only. Tracey's real client photos, published with written consent, replace these."
+  },
   // {
   //   before: "img/case-01-before.jpg",
   //   after:  "img/case-01-after.jpg",
