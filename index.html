@@ -1,0 +1,1642 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bonnie Lass Beauty | Cosmetic Nurse &amp; Skin Clinic, Melton</title>
+<meta name="description" content="Bonnie Lass Beauty is a skin and cosmetic nursing clinic in Melton, Victoria. Nurse Tracey has a special interest in perimenopausal skin and skin laxity after weight loss. Take the free skin assessment. Skin recovery, at your own pace.">
+<meta name="theme-color" content="#1B2540">
+
+<meta property="og:title" content="Bonnie Lass Beauty | Skin Clinic, Melton VIC">
+<meta property="og:description" content="Skin recovery, at your own pace. Skin and cosmetic nursing with Nurse Tracey, Melton. Take the free skin assessment.">
+<meta property="og:type" content="website">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalBusiness",
+  "name": "Bonnie Lass Beauty",
+  "description": "Skin and cosmetic nursing clinic in Melton, Victoria.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "44 Smith Street",
+    "addressLocality": "Melton",
+    "addressRegion": "VIC",
+    "postalCode": "3337",
+    "addressCountry": "AU"
+  },
+  "telephone": "+61434710010",
+  "email": "hello@bonnielassbeauty.com.au",
+  "openingHours": "Mo-Su 09:00-19:00",
+  "priceRange": "$$",
+  "url": "https://www.bonnielassbeauty.com.au"
+}
+</script>
+
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --ink:        #1B2540;
+    --ink-soft:   #3A4560;
+    --muted:      #77809A;
+    --gold:       #BF9B45;
+    --gold-deep:  #8F6B2E;
+    --gold-pale:  #D8C060;
+    --ivory:      #FAF8F5;
+    --ivory-warm: #F2EEE7;
+    --blush:      #E6E2DA;
+    --line:       rgba(27,37,64,0.12);
+    --white:      #FFFEFC;
+
+    --display: 'Cormorant Garamond', Georgia, serif;
+    --body: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
+
+    --wrap: 1180px;
+    --gutter: clamp(20px, 5vw, 64px);
+  }
+
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+
+  body {
+    font-family: var(--body);
+    background: var(--ivory);
+    color: var(--ink-soft);
+    font-weight: 300;
+    font-size: 17px;
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  img { max-width: 100%; display: block; }
+
+  .wrap { max-width: var(--wrap); margin: 0 auto; padding-inline: var(--gutter); }
+
+  h1, h2, h3 { font-family: var(--display); font-weight: 400; color: var(--ink); line-height: 1.12; letter-spacing: -0.01em; }
+
+  .eyebrow {
+    font-family: var(--body);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--gold-deep);
+    margin-bottom: 22px;
+  }
+  .eyebrow.on-dark { color: var(--gold-pale); }
+
+  .rule {
+    width: 44px; height: 1px; background: var(--gold);
+    margin: 28px 0;
+  }
+  .rule.center { margin-inline: auto; }
+
+  /* ---------- BUTTONS ---------- */
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+    font-family: var(--body); font-size: 12px; font-weight: 500;
+    letter-spacing: 0.16em; text-transform: uppercase; text-decoration: none;
+    padding: 19px 38px; border: 1px solid transparent; cursor: pointer;
+    transition: all .45s cubic-bezier(.2,.7,.3,1);
+  }
+  .btn-solid { background: var(--ink); color: var(--ivory); }
+  .btn-solid:hover { background: var(--gold-deep); }
+  .btn-gold { background: var(--gold); color: #fff; }
+  .btn-gold:hover { background: var(--gold-deep); }
+  .btn-line { border-color: var(--ink); color: var(--ink); background: transparent; }
+  .btn-line:hover { background: var(--ink); color: var(--ivory); }
+  .btn-line-light { border-color: rgba(255,255,255,0.45); color: #fff; background: transparent; }
+  .btn-line-light:hover { background: #fff; color: var(--ink); border-color: #fff; }
+
+  /* ---------- NAV ---------- */
+  header {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    padding: 22px 0;
+    transition: background .5s ease, padding .5s ease, box-shadow .5s ease;
+  }
+  header.scrolled {
+    background: rgba(250,248,245,0.94);
+    backdrop-filter: blur(14px);
+    padding: 14px 0;
+    box-shadow: 0 1px 0 var(--line);
+  }
+  .nav { display: flex; align-items: center; justify-content: space-between; }
+  .brandmark {
+    font-family: var(--display); font-size: 21px; letter-spacing: 0.02em;
+    color: #fff; text-decoration: none; transition: color .4s ease; white-space: nowrap;
+  }
+  .brandmark em { font-style: italic; color: var(--gold-pale); }
+  header.scrolled .brandmark { color: var(--ink); }
+  header.scrolled .brandmark em { color: var(--gold-deep); }
+
+  .nav-links { display: flex; align-items: center; gap: 34px; }
+  .nav-links a {
+    font-size: 12px; font-weight: 400; letter-spacing: 0.13em; text-transform: uppercase;
+    color: rgba(255,255,255,0.88); text-decoration: none; transition: color .35s ease;
+  }
+  .nav-links a:hover { color: var(--gold-pale); }
+  header.scrolled .nav-links a { color: var(--ink-soft); }
+  header.scrolled .nav-links a:hover { color: var(--gold-deep); }
+
+  .nav-cta {
+    font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase;
+    padding: 13px 26px; border: 1px solid rgba(255,255,255,0.5); color: #fff;
+    text-decoration: none; transition: all .4s ease; white-space: nowrap;
+  }
+  .nav-cta:hover { background: #fff; color: var(--ink); }
+  header.scrolled .nav-cta { border-color: var(--ink); color: var(--ink); }
+  header.scrolled .nav-cta:hover { background: var(--ink); color: var(--ivory); }
+
+  .burger { display: none; background: none; border: 0; cursor: pointer; padding: 8px; }
+  .burger span { display: block; width: 24px; height: 1px; background: #fff; margin: 6px 0; transition: background .4s; }
+  header.scrolled .burger span { background: var(--ink); }
+
+  /* ---------- HERO ---------- */
+  .hero {
+    position: relative; min-height: 100svh;
+    display: flex; align-items: center;
+    background: var(--ink);
+    overflow: hidden;
+  }
+  .hero-media { position: absolute; inset: 0; z-index: 0; }
+  .hero-media img { width: 100%; height: 100%; object-fit: cover; object-position: 68% 28%; }
+  .hero-media::after {
+    content: ''; position: absolute; inset: 0;
+    background:
+      linear-gradient(100deg, rgba(20,29,52,0.90) 0%, rgba(20,29,52,0.66) 42%, rgba(20,29,52,0.30) 100%),
+      linear-gradient(180deg, rgba(20,29,52,0.55) 0%, transparent 30%, rgba(20,29,52,0.45) 100%);
+  }
+  .hero-inner { position: relative; z-index: 2; padding: 150px 0 90px; max-width: 660px; }
+  .hero h1 {
+    color: var(--white);
+    font-size: clamp(46px, 7.2vw, 88px);
+    line-height: 1.03;
+    margin-bottom: 26px;
+  }
+  .hero h1 em { font-style: italic; color: var(--gold-pale); }
+  .hero p.lede {
+    color: rgba(255,253,250,0.86);
+    font-size: clamp(16px, 1.9vw, 19px);
+    max-width: 500px;
+    margin-bottom: 40px;
+  }
+  .hero-actions { display: flex; flex-wrap: wrap; gap: 14px; }
+
+  .hero-meta {
+    position: absolute; bottom: 34px; left: 0; right: 0; z-index: 2;
+  }
+  .hero-meta-inner {
+    display: flex; flex-wrap: wrap; gap: 28px;
+    border-top: 1px solid rgba(255,255,255,0.16); padding-top: 22px;
+    font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase;
+    color: rgba(255,255,255,0.62);
+  }
+  .hero-meta-inner span { display: flex; align-items: center; gap: 9px; }
+  .hero-meta-inner span::before { content: ''; width: 4px; height: 4px; background: var(--gold); border-radius: 50%; }
+
+  /* ---------- SECTIONS ---------- */
+  section { padding: clamp(80px, 11vw, 140px) 0; }
+  .section-head { max-width: 640px; margin-bottom: 64px; }
+  .section-head.center { margin-inline: auto; text-align: center; }
+  .section-head h2 { font-size: clamp(34px, 4.6vw, 54px); margin-bottom: 22px; }
+  .section-head h2 em { font-style: italic; color: var(--gold-deep); }
+  .section-head p { color: var(--muted); font-size: 17px; }
+
+  /* ---------- THE TWO STORIES ---------- */
+  .stories { background: var(--ivory-warm); }
+  .story-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 28px;
+  }
+  .story {
+    background: var(--white); border: 1px solid var(--line);
+    padding: 0; overflow: hidden;
+    display: flex; flex-direction: column;
+    transition: transform .6s cubic-bezier(.2,.7,.3,1), box-shadow .6s ease;
+  }
+  .story:hover { transform: translateY(-6px); box-shadow: 0 24px 60px -30px rgba(27,37,64,0.28); }
+  .story-img { aspect-ratio: 3/2; overflow: hidden; background: var(--blush); }
+  .story-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 1.1s cubic-bezier(.2,.7,.3,1); }
+  .story:hover .story-img img { transform: scale(1.05); }
+  .story-body { padding: 40px 38px 42px; flex: 1; display: flex; flex-direction: column; }
+  .story-body h3 { font-size: 29px; margin-bottom: 8px; }
+  .story-kicker {
+    font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--gold-deep); margin-bottom: 16px;
+  }
+  .story-body p { color: var(--muted); font-size: 16px; margin-bottom: 24px; }
+  .story-body p strong { color: var(--ink); font-weight: 500; }
+  .story-link {
+    margin-top: auto; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--ink); text-decoration: none; display: inline-flex; align-items: center; gap: 10px;
+    border-bottom: 1px solid var(--gold); padding-bottom: 6px; align-self: flex-start;
+    transition: gap .4s ease, color .4s ease;
+  }
+  .story-link:hover { gap: 18px; color: var(--gold-deep); }
+
+  /* ---------- FREE ASSESSMENT ---------- */
+  .assess { background: var(--ink); color: rgba(255,253,250,0.82); position: relative; overflow: hidden; }
+  .assess::before {
+    content: ''; position: absolute; top: -30%; right: -12%;
+    width: 620px; height: 620px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(191,155,69,0.16) 0%, transparent 68%);
+    pointer-events: none;
+  }
+  .assess-grid {
+    position: relative; z-index: 1;
+    display: grid; grid-template-columns: 1.05fr 0.95fr; gap: clamp(40px, 6vw, 90px); align-items: center;
+  }
+  .assess h2 { color: var(--white); font-size: clamp(34px, 4.6vw, 54px); margin-bottom: 22px; }
+  .assess h2 em { font-style: italic; color: var(--gold-pale); }
+  .assess > .wrap > .assess-grid p.lede { font-size: 18px; margin-bottom: 34px; }
+
+  .assess-steps { list-style: none; margin-bottom: 40px; }
+  .assess-steps li {
+    display: flex; gap: 18px; padding: 18px 0;
+    border-top: 1px solid rgba(255,255,255,0.12);
+    font-size: 16px; color: rgba(255,253,250,0.8);
+  }
+  .assess-steps li:last-child { border-bottom: 1px solid rgba(255,255,255,0.12); }
+  .assess-steps .num {
+    font-family: var(--display); font-size: 20px; color: var(--gold-pale);
+    min-width: 26px; line-height: 1.5;
+  }
+  .assess-steps strong { color: var(--white); font-weight: 500; display: block; margin-bottom: 2px; }
+
+  .assess-card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.14);
+    padding: clamp(34px, 4vw, 52px);
+    text-align: center;
+    backdrop-filter: blur(6px);
+  }
+  .assess-card .tag {
+    display: inline-block; font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--ink); background: var(--gold-pale); padding: 8px 16px; margin-bottom: 26px;
+  }
+  .assess-card .price {
+    font-family: var(--display); font-size: clamp(56px, 8vw, 82px);
+    color: var(--white); line-height: 1; margin-bottom: 10px;
+  }
+  .assess-card .price-sub {
+    font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--gold-pale); margin-bottom: 28px;
+  }
+  .assess-card p { font-size: 15px; margin-bottom: 30px; color: rgba(255,253,250,0.72); }
+  .assess-card .btn { width: 100%; }
+  .assess-card .fineprint {
+    margin-top: 22px; margin-bottom: 0; font-size: 12px; line-height: 1.6;
+    color: rgba(255,253,250,0.42); letter-spacing: 0.02em;
+  }
+
+  /* ---------- QUIZ ---------- */
+  .assess-figure { margin-top: 40px; overflow: hidden; }
+  .assess-figure img { width: 100%; aspect-ratio: 16/10; object-fit: cover; opacity: .88; }
+
+  .quiz {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.16);
+    padding: clamp(28px, 3.4vw, 44px);
+    backdrop-filter: blur(8px);
+    position: relative;
+    min-height: 540px;
+  }
+  .quiz-progress {
+    position: absolute; top: 0; left: 0; right: 0; height: 2px;
+    background: rgba(255,255,255,0.1);
+  }
+  .quiz-progress span {
+    display: block; height: 100%; width: 20%;
+    background: var(--gold); transition: width .6s cubic-bezier(.2,.7,.3,1);
+  }
+
+  .qstep { display: none; }
+  .qstep.active { display: block; animation: fade .5s ease; }
+
+  .qcount {
+    font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--gold-pale); margin-bottom: 14px;
+  }
+  .quiz h3 {
+    color: var(--white); font-size: clamp(23px, 2.5vw, 30px);
+    line-height: 1.2; margin-bottom: 10px;
+  }
+  .qhint { font-size: 14px; color: rgba(255,255,255,0.5); margin-bottom: 24px; }
+
+  .qopts { display: flex; flex-direction: column; gap: 9px; margin-bottom: 26px; }
+  .qopt {
+    text-align: left; font-family: var(--body); font-size: 15px; font-weight: 300;
+    color: rgba(255,255,255,0.86); background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.16); padding: 15px 18px; cursor: pointer;
+    transition: all .3s ease; line-height: 1.4;
+  }
+  .qopt:hover { border-color: var(--gold); background: rgba(191,155,69,0.12); color: #fff; }
+  .qopt.sel {
+    border-color: var(--gold); background: rgba(191,155,69,0.2); color: #fff;
+    box-shadow: inset 3px 0 0 var(--gold);
+  }
+
+  .qnext { width: 100%; }
+  .qnext:disabled { opacity: .35; cursor: not-allowed; }
+
+  .qnav { margin-top: 18px; }
+  .qback {
+    background: none; border: 0; cursor: pointer; font-family: var(--body);
+    font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase;
+    color: rgba(255,255,255,0.45); padding: 6px 0;
+  }
+  .qback:hover { color: var(--gold-pale); }
+
+  .qfield { display: block; margin-bottom: 16px; }
+  .qfield span {
+    display: block; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase;
+    color: rgba(255,255,255,0.55); margin-bottom: 7px;
+  }
+  .qfield input {
+    width: 100%; font-family: var(--body); font-size: 16px; font-weight: 300; color: #fff;
+    background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.2);
+    padding: 14px 16px; transition: border-color .3s ease;
+  }
+  .qfield input:focus { outline: 0; border-color: var(--gold); }
+  .qfield input::placeholder { color: rgba(255,255,255,0.3); }
+
+  .qconsent {
+    display: flex; gap: 11px; align-items: flex-start; margin: 20px 0 22px;
+    font-size: 13px; line-height: 1.55; color: rgba(255,255,255,0.6); cursor: pointer;
+  }
+  .qconsent input { margin-top: 3px; accent-color: var(--gold); flex-shrink: 0; }
+
+  .qerror {
+    font-size: 13px; color: #F2A2A2; margin-bottom: 14px;
+    border-left: 2px solid #F2A2A2; padding-left: 12px;
+  }
+  #qsubmit { width: 100%; }
+  #qsubmit:disabled { opacity: .5; cursor: wait; }
+
+  .qresult { text-align: center; }
+  .qtick {
+    width: 46px; height: 46px; margin: 0 auto 22px;
+    border: 1px solid var(--gold); border-radius: 50%;
+    display: flex; align-items: center; justify-content: center; color: var(--gold-pale);
+  }
+  .qrlede { font-size: 15px; color: rgba(255,255,255,0.7); margin-bottom: 24px; }
+  .qrbox {
+    background: rgba(191,155,69,0.1); border: 1px solid rgba(191,155,69,0.3);
+    padding: 22px 24px; margin-bottom: 26px; text-align: left;
+  }
+  .qrlabel {
+    font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase;
+    color: var(--gold-pale); margin-bottom: 8px;
+  }
+  .qrbox p:last-child { font-size: 15px; color: rgba(255,255,255,0.86); margin: 0; }
+  .qresult .btn { width: 100%; }
+  .qresult .fineprint { margin-top: 20px; font-size: 12px; line-height: 1.6; color: rgba(255,253,250,0.4); }
+
+  /* ---------- TREATMENTS ---------- */
+  .treat-tabs {
+    display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 48px;
+    border-bottom: 1px solid var(--line); padding-bottom: 0;
+  }
+  .treat-tab {
+    background: none; border: 0; border-bottom: 2px solid transparent;
+    font-family: var(--body); font-size: 12px; font-weight: 500;
+    letter-spacing: 0.13em; text-transform: uppercase;
+    color: var(--muted); padding: 14px 20px; cursor: pointer;
+    transition: color .35s ease, border-color .35s ease;
+  }
+  .treat-tab:hover { color: var(--ink); }
+  .treat-tab.active { color: var(--ink); border-bottom-color: var(--gold); }
+
+  .treat-panel { display: none; }
+  .treat-panel.active { display: block; animation: fade .6s ease; }
+  @keyframes fade { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+
+  .treat-list { border-top: 1px solid var(--line); }
+  .treat-item {
+    display: grid; grid-template-columns: 1fr auto;
+    gap: 20px 40px; align-items: start;
+    padding: 30px 0; border-bottom: 1px solid var(--line);
+  }
+  .treat-item h3 { font-size: 24px; margin-bottom: 8px; }
+  .treat-item p { color: var(--muted); font-size: 15px; max-width: 640px; margin: 0; }
+  .treat-dur {
+    display: inline-block; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--gold-deep); margin-bottom: 10px;
+  }
+  .treat-price {
+    font-family: var(--display); font-size: 30px; color: var(--ink);
+    white-space: nowrap; text-align: right; line-height: 1.2;
+  }
+  .treat-price small {
+    display: block; font-family: var(--body); font-size: 11px;
+    letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-top: 4px;
+  }
+  .treat-price.varies { font-size: 19px; color: var(--muted); font-style: italic; }
+
+  .treat-note {
+    margin-top: 40px; padding: 26px 30px;
+    background: var(--ivory-warm); border-left: 2px solid var(--gold);
+    font-size: 14px; color: var(--muted); line-height: 1.7;
+  }
+  .treat-note strong { color: var(--ink); font-weight: 500; }
+
+  /* ---------- CONCERN CARDS (extra) ---------- */
+  .story-img { display: block; }
+  .story-body h3 a { color: inherit; text-decoration: none; }
+  .story-body h3 a:hover { color: var(--gold-deep); }
+
+  .more-concerns {
+    margin-top: 46px; padding-top: 30px; border-top: 1px solid var(--line);
+    display: flex; flex-wrap: wrap; align-items: center; gap: 18px;
+  }
+  .mc-label {
+    font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--gold-deep); margin: 0;
+  }
+  .mc-links { display: flex; flex-wrap: wrap; gap: 10px; }
+  .mc-links a {
+    font-size: 13px; color: var(--ink); text-decoration: none;
+    border: 1px solid var(--line); padding: 10px 20px; transition: all .35s ease;
+  }
+  .mc-links a:hover { border-color: var(--gold); color: var(--gold-deep); }
+
+  /* ---------- TREATMENTS TEASER ---------- */
+  .tease-grid {
+    display: grid; grid-template-columns: 1.05fr 0.95fr;
+    gap: clamp(40px, 6vw, 84px); align-items: center;
+  }
+  .tease h2 { font-size: clamp(32px, 4.4vw, 50px); margin-bottom: 20px; }
+  .tease-lede { color: var(--muted); margin-bottom: 32px; }
+  .tease-list { list-style: none; margin-bottom: 36px; border-top: 1px solid var(--line); }
+  .tease-list li {
+    display: flex; justify-content: space-between; gap: 20px; align-items: baseline;
+    padding: 16px 0; border-bottom: 1px solid var(--line);
+  }
+  .tease-list span { font-size: 16px; color: var(--ink); }
+  .tease-list strong {
+    font-family: var(--display); font-size: 21px; font-weight: 400;
+    color: var(--gold-deep); white-space: nowrap;
+  }
+  .tease-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+  .tease-img img { width: 100%; aspect-ratio: 4/5; object-fit: cover; }
+
+  /* ---------- TRACEY ---------- */
+  .tracey { background: var(--ivory-warm); }
+  .tracey-grid {
+    display: grid; grid-template-columns: 0.85fr 1.15fr;
+    gap: clamp(40px, 6vw, 90px); align-items: center;
+  }
+  .tracey-portrait { position: relative; }
+  .tracey-portrait img {
+    width: 100%; aspect-ratio: 4/5; object-fit: cover; object-position: center top;
+  }
+  .tracey-portrait::after {
+    content: ''; position: absolute; inset: 14px -14px -14px 14px;
+    border: 1px solid var(--gold); z-index: -1;
+  }
+  .tracey h2 { font-size: clamp(34px, 4.6vw, 54px); margin-bottom: 6px; }
+  .tracey .role {
+    font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--gold-deep); margin-bottom: 26px;
+  }
+  .tracey p { margin-bottom: 20px; color: var(--ink-soft); }
+  .creds { list-style: none; margin: 32px 0 0; display: grid; gap: 12px; }
+  .creds li {
+    display: flex; gap: 12px; align-items: flex-start;
+    font-size: 15px; color: var(--ink-soft);
+  }
+  .creds li::before {
+    content: ''; flex-shrink: 0; width: 5px; height: 5px; margin-top: 11px;
+    background: var(--gold); border-radius: 50%;
+  }
+
+  /* ---------- CLINIC CAROUSEL ---------- */
+  .carousel { position: relative; margin-top: 8px; }
+  .car-track {
+    display: flex; gap: 18px;
+    overflow-x: auto; scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    padding: 4px calc((100vw - min(1180px, 100vw - 2 * clamp(20px,5vw,64px))) / 2) 4px;
+    scrollbar-width: none; -ms-overflow-style: none;
+  }
+  .car-track::-webkit-scrollbar { display: none; }
+
+  .slide {
+    flex: 0 0 auto; width: min(460px, 78vw);
+    scroll-snap-align: center; position: relative; overflow: hidden;
+    background: var(--blush);
+  }
+  .slide img {
+    width: 100%; aspect-ratio: 3/2; object-fit: cover;
+    transition: transform 1.1s cubic-bezier(.2,.7,.3,1);
+  }
+  .slide:hover img { transform: scale(1.04); }
+  .slide figcaption {
+    position: absolute; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(to top, rgba(20,29,52,0.86), transparent);
+    color: #fff; padding: 40px 20px 16px;
+    font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase;
+    opacity: 0; transform: translateY(8px); transition: all .5s ease;
+  }
+  .slide:hover figcaption { opacity: 1; transform: none; }
+
+  .car-btn {
+    position: absolute; top: 50%; transform: translateY(-50%); z-index: 3;
+    width: 50px; height: 50px; border-radius: 50%;
+    background: rgba(255,254,252,0.94); border: 1px solid var(--line);
+    color: var(--ink); font-size: 17px; cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    transition: all .35s ease; box-shadow: 0 6px 22px -8px rgba(27,37,64,0.3);
+  }
+  .car-btn:hover { background: var(--ink); color: var(--ivory); border-color: var(--ink); }
+  .car-btn.prev { left: clamp(10px, 3vw, 40px); }
+  .car-btn.next { right: clamp(10px, 3vw, 40px); }
+
+  .car-dots { display: flex; justify-content: center; gap: 8px; margin-top: 30px; }
+  .car-dots button {
+    width: 7px; height: 7px; border-radius: 50%; border: 0; padding: 0;
+    background: var(--line); cursor: pointer; transition: all .35s ease;
+  }
+  .car-dots button.on { background: var(--gold); transform: scale(1.5); }
+
+  @media (max-width: 760px) {
+    .car-btn { display: none; }
+    .car-track { padding-inline: var(--gutter); }
+    .slide { width: 84vw; }
+    .slide figcaption { opacity: 1; transform: none; }
+  }
+
+  /* ---------- RESULTS / GATED ---------- */
+  .results {
+    background: var(--ink); color: rgba(255,253,250,0.8);
+    text-align: center; position: relative; overflow: hidden;
+  }
+  .results::before {
+    content: ''; position: absolute; inset: 0;
+    background: radial-gradient(ellipse at 50% 0%, rgba(191,155,69,0.14) 0%, transparent 60%);
+  }
+  .results .wrap { position: relative; z-index: 1; }
+  .results h2 { color: var(--white); font-size: clamp(32px, 4.4vw, 50px); margin-bottom: 20px; }
+  .results h2 em { font-style: italic; color: var(--gold-pale); }
+  .results > .wrap > p {
+    max-width: 620px; margin: 0 auto 20px; font-size: 17px;
+  }
+  .lock-icon {
+    width: 46px; height: 46px; margin: 0 auto 28px;
+    border: 1px solid var(--gold); border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    color: var(--gold-pale);
+  }
+  .results-note {
+    max-width: 640px; margin: 34px auto 0;
+    font-size: 13px; line-height: 1.7; color: rgba(255,253,250,0.42);
+    border-top: 1px solid rgba(255,255,255,0.12); padding-top: 26px;
+  }
+
+  /* ---------- RETAIL ---------- */
+  .brands { text-align: center; }
+  .brand-row {
+    display: flex; flex-wrap: wrap; justify-content: center;
+    gap: 14px 40px; margin-top: 8px;
+  }
+  .brand-row span {
+    font-family: var(--display); font-size: 22px; color: var(--muted);
+    letter-spacing: 0.04em;
+  }
+
+  /* ---------- Q&A ---------- */
+  .qa { background: var(--ivory-warm); }
+  .qa .section-head a { color: var(--gold-deep); text-decoration: none; border-bottom: 1px solid var(--gold); }
+
+  .faq-tabs {
+    display: flex; flex-wrap: wrap; justify-content: center; gap: 8px;
+    margin-bottom: 48px;
+  }
+  .faq-tab {
+    background: none; border: 1px solid var(--line); cursor: pointer;
+    font-family: var(--body); font-size: 12px; font-weight: 500;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--muted); padding: 12px 22px; transition: all .35s ease;
+  }
+  .faq-tab:hover { color: var(--ink); border-color: var(--ink); }
+  .faq-tab.active { background: var(--ink); border-color: var(--ink); color: var(--ivory); }
+
+  .faq-group { display: none; }
+  .faq-group.open { display: block; animation: fade .5s ease; }
+  .faq-group-title {
+    font-size: clamp(24px, 3vw, 32px); text-align: center; margin-bottom: 30px;
+    color: var(--ink);
+  }
+
+  .faq-list {
+    max-width: 840px; margin: 0 auto;
+    border-top: 1px solid var(--line);
+  }
+  .faq { border-bottom: 1px solid var(--line); }
+  .faq summary {
+    cursor: pointer; list-style: none; position: relative;
+    padding: 24px 44px 24px 0;
+    font-family: var(--display); font-size: clamp(19px, 2.1vw, 23px);
+    color: var(--ink); line-height: 1.35;
+  }
+  .faq summary::-webkit-details-marker { display: none; }
+  .faq summary::after {
+    content: '+'; position: absolute; right: 4px; top: 21px;
+    font-size: 24px; color: var(--gold); font-family: var(--body); font-weight: 300;
+    transition: transform .4s cubic-bezier(.2,.7,.3,1);
+  }
+  .faq[open] summary::after { transform: rotate(45deg); }
+  .faq[open] summary { color: var(--gold-deep); }
+  .faq p {
+    padding: 0 44px 26px 0; margin: 0;
+    color: var(--ink-soft); font-size: 16px; line-height: 1.75;
+  }
+
+  /* ---------- VISIT ---------- */
+  .visit { background: var(--ivory-warm); }
+  .visit-grid {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: clamp(40px, 6vw, 80px); align-items: start;
+  }
+  .visit h2 { font-size: clamp(34px, 4.6vw, 54px); margin-bottom: 26px; }
+  .visit-details { list-style: none; }
+  .visit-details li {
+    padding: 22px 0; border-bottom: 1px solid var(--line);
+    display: grid; grid-template-columns: 120px 1fr; gap: 20px; align-items: baseline;
+  }
+  .visit-details .label {
+    font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold-deep);
+  }
+  .visit-details .val { font-size: 17px; color: var(--ink); }
+  .visit-details .val a { color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--gold); }
+  .visit-details .val a:hover { color: var(--gold-deep); }
+  .visit-details .val small { display: block; color: var(--muted); font-size: 14px; margin-top: 4px; }
+  .map { width: 100%; aspect-ratio: 1/1; border: 0; filter: grayscale(1) contrast(1.05); }
+
+  /* ---------- FOOTER ---------- */
+  footer { background: var(--ink); color: rgba(255,253,250,0.5); padding: 70px 0 34px; }
+  .foot-top {
+    display: flex; flex-wrap: wrap; justify-content: space-between; gap: 40px;
+    padding-bottom: 44px; border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+  .foot-brand { font-family: var(--display); font-size: 27px; color: var(--white); }
+  .foot-brand em { font-style: italic; color: var(--gold-pale); }
+  .foot-brand span {
+    display: block; font-family: var(--body); font-size: 12px;
+    letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold-deep); margin-top: 10px;
+  }
+  .foot-nav { display: flex; flex-wrap: wrap; gap: 26px; }
+  .foot-nav a {
+    font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase;
+    color: rgba(255,253,250,0.6); text-decoration: none;
+  }
+  .foot-nav a:hover { color: var(--gold-pale); }
+  .foot-bottom {
+    padding-top: 26px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px;
+    font-size: 12px; color: rgba(255,253,250,0.34);
+  }
+  .compliance {
+    margin-top: 26px; font-size: 12px; line-height: 1.7;
+    color: rgba(255,253,250,0.34); max-width: 780px;
+  }
+
+  /* ---------- MOBILE ---------- */
+  @media (max-width: 900px) {
+    .assess-grid, .tracey-grid, .visit-grid, .tease-grid { grid-template-columns: 1fr; }
+    .tracey-portrait { max-width: 400px; }
+    .tracey-portrait::after { display: none; }
+  }
+  @media (max-width: 760px) {
+    .nav-links { display: none; }
+    .burger { display: block; }
+    .nav-cta { display: none; }
+    .nav-links.open {
+      display: flex; flex-direction: column; gap: 4px;
+      position: absolute; top: 100%; left: 0; right: 0;
+      background: var(--ivory); padding: 20px var(--gutter) 28px;
+      box-shadow: 0 20px 40px -20px rgba(0,0,0,0.25);
+    }
+    .nav-links.open a { color: var(--ink-soft); padding: 12px 0; width: 100%; border-bottom: 1px solid var(--line); }
+    .hero { min-height: 0; display: block; }
+    .hero-media { position: relative; aspect-ratio: 1900 / 1150; }
+    .hero-media img { object-position: center; }
+    .hero-media::after { background: linear-gradient(180deg, rgba(20,29,52,0.5) 0%, transparent 30%, transparent 100%); }
+    .hero-inner { padding: 34px 0 46px; }
+    .treat-item { grid-template-columns: 1fr; }
+    .treat-price { text-align: left; }
+    .visit-details li { grid-template-columns: 1fr; gap: 6px; }
+    .hero-meta { display: none; }
+  }
+
+  /* ---------- REVEAL ---------- */
+  .reveal { opacity: 0; transform: translateY(26px); transition: opacity 1s ease, transform 1s cubic-bezier(.2,.7,.3,1); }
+  .reveal.in { opacity: 1; transform: none; }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { animation: none !important; transition: none !important; }
+    .reveal { opacity: 1; transform: none; }
+    html { scroll-behavior: auto; }
+  }
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Do I have to know what I want before I come in?", "acceptedAnswer": {"@type": "Answer", "text": "No, and most people do not. That is the entire point of the consultation. You come in, describe what you are seeing, and Tracey works out what is actually causing it. Plenty of people arrive able to say only that something has changed."}}, {"@type": "Question", "name": "What actually happens at the first appointment?", "acceptedAnswer": {"@type": "Answer", "text": "A full facial assessment. Tracey looks at structure, laxity, texture, pigment and what has changed, then talks you through what she has found and what would help, in order of what would make the biggest difference. Every treatment at Bonnie Lass includes a free consultation, an individualised treatment plan, and a complimentary follow-up appointment to review your results."}}, {"@type": "Question", "name": "Will I be pressured into booking something?", "acceptedAnswer": {"@type": "Answer", "text": "No. Tracey will tell you when the answer is skincare and sun protection, or nothing at all right now. Her position is that she would rather you trusted her than booked with her, and a consultation with no treatment is a legitimate outcome, not a failed sale."}}, {"@type": "Question", "name": "What if I am too embarrassed to say what is bothering me?", "acceptedAnswer": {"@type": "Answer", "text": "Say it anyway. Tracey spent thirty years in nursing, midwifery and critical care before she came to aesthetics. There is genuinely nothing you can raise that will faze her, and the thing people are most embarrassed about is usually the thing most easily treated."}}, {"@type": "Question", "name": "Is the free skin assessment the same as a consultation?", "acceptedAnswer": {"@type": "Answer", "text": "No. The assessment on this website is a short questionnaire that gives you a starting read on what is likely driving the change in your skin. The consultation is in person, with Tracey, looking at your actual face. The assessment is a useful first step, not a substitute."}}, {"@type": "Question", "name": "Does it hurt?", "acceptedAnswer": {"@type": "Answer", "text": "It varies by treatment, and Tracey will tell you honestly what to expect before you commit. Microneedling is uncomfortable rather than painful. PRX-Plus uses no needles at all. Discomfort is managed, and nobody is expected to grit their teeth through anything."}}, {"@type": "Question", "name": "How much downtime will I need?", "acceptedAnswer": {"@type": "Answer", "text": "It depends on what you have. PRX-Plus is specifically a no-downtime treatment - there is no needling and no peeling, so you can have it and go back to work. Microneedling will leave you pink for a day or two. Injectable treatments may cause slight redness, swelling or tenderness in the treated area, which is expected and usually resolves within a few days."}}, {"@type": "Question", "name": "How many sessions will I actually need?", "acceptedAnswer": {"@type": "Answer", "text": "More than one, for most things, and Tracey will give you the real number up front rather than after you have paid. Microneedling is at least three sessions two weeks apart. PRX-Plus is a course of three to five, two weeks apart. BYRYZN is three sessions four weeks apart. Bio-remodelling starts with two, four to six weeks apart. A single session of most of these is a taste, not a change."}}, {"@type": "Question", "name": "Will I look like I have had something done?", "acceptedAnswer": {"@type": "Answer", "text": "That is the outcome we are actively trying to avoid. Tracey's stated bias is towards restraint and natural results, and most of the treatments relevant to skin quality change how your skin behaves rather than change your face. The aim is that people say you look well or rested, not that they can identify what you had."}}, {"@type": "Question", "name": "How long do results last?", "acceptedAnswer": {"@type": "Answer", "text": "It depends entirely on the treatment. Some collagen-stimulating treatments build over weeks and hold for many months. Lifting threads lift from day one, with continued tightening over six to twelve weeks and results lasting twelve to eighteen months. Muscle-relaxing treatments typically last three to four months. Tracey will give you a realistic range rather than a best case."}}, {"@type": "Question", "name": "Can I have treatments in summer?", "acceptedAnswer": {"@type": "Answer", "text": "Some, yes - which is unusual. PRX-Plus and BYRYZN are safe for all skin types and all seasons. Other resurfacing treatments are better saved for winter, and Tracey will tell you which is which rather than take your money in January."}}, {"@type": "Question", "name": "Why do some treatments have a price and others do not?", "acceptedAnswer": {"@type": "Answer", "text": "Because some are purchased and some are prescribed. Skin treatments like PRX-Plus, BYRYZN, Rejuran and microneedling have a fixed price, and it is published on this site. Injectable treatments depend on your face, the area and the amount required - quoting a number before Tracey has assessed you would be a guess, so we do not."}}, {"@type": "Question", "name": "Will I get a price before anything happens?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. You will know exactly what a treatment costs before you agree to it. Nobody is billed for a surprise."}}, {"@type": "Question", "name": "Are packages cheaper?", "acceptedAnswer": {"@type": "Answer", "text": "Where a treatment genuinely needs a course, yes. The microneedling course of four with NCTF is $1,170, which saves $130. The exosome course of four is $1,350, saving $150. The packages exist because the course is what produces the result, not as a sales tactic."}}, {"@type": "Question", "name": "Do you offer gift vouchers?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Ask in clinic or call 0434 710 010."}}, {"@type": "Question", "name": "What is the cheapest way to start?", "acceptedAnswer": {"@type": "Answer", "text": "The free skin assessment, then the consultation. Both cost nothing, and Tracey will frequently tell you that the highest-value thing you can do is skincare and sun protection - which is the cheapest intervention there is."}}, {"@type": "Question", "name": "Who performs the treatments?", "acceptedAnswer": {"@type": "Answer", "text": "Nurse Tracey. She holds Bachelor's degrees in both Nursing and Midwifery, a Post Graduate qualification in Critical Care and a Masters as a Nurse Practitioner, with over thirty years of experience in the medical field. Some procedures also require a pre-treatment video call with a cosmetic doctor, and Tracey will arrange that."}}, {"@type": "Question", "name": "Is everyone suitable for treatment?", "acceptedAnswer": {"@type": "Answer", "text": "No, and that matters. A consultation with a registered nurse is required before any procedure specifically to assess whether you are a suitable candidate. Some people are not, and they will be told so."}}, {"@type": "Question", "name": "What should I do after a treatment?", "acceptedAnswer": {"@type": "Answer", "text": "You will be given specific instructions for what you have had. After volume restoring treatments, the general advice is to keep the area clean, avoid heavy oil-based creams and makeup while healing, avoid heat and direct UV, avoid exercise for 24 to 48 hours, avoid alcohol for the first 24 hours, avoid AHAs, BHAs, retinol and vitamin C for 24 hours, avoid laser, microdermabrasion and chemical peels for two weeks, sleep on your back for the first few nights, and take paracetamol rather than ibuprofen or aspirin if you need pain relief. No flights for 72 hours."}}, {"@type": "Question", "name": "Is lumpiness normal afterwards?", "acceptedAnswer": {"@type": "Answer", "text": "After volume restoring treatments, lumpiness and unevenness in the first two weeks is normal - the product takes time to integrate with your own tissue and lumps soften over time. Book a follow-up appointment for two weeks after the procedure to check everything is settling as it should. If anything worries you before then, call the clinic."}}, {"@type": "Question", "name": "What if something does not look right?", "acceptedAnswer": {"@type": "Answer", "text": "Call the clinic on 0434 710 010. Do not sit at home worrying about it. If you experience any unusual symptoms, seek medical assistance."}}, {"@type": "Question", "name": "Do I get a follow-up?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. A complimentary follow-up appointment to review your results is included with every treatment."}}, {"@type": "Question", "name": "Why can I not see before and after photos on your website?", "acceptedAnswer": {"@type": "Answer", "text": "Because Australian law does not permit clinics to advertise before and after images of prescription-only treatments to the public. That is an AHPRA and TGA advertising requirement, and any clinic showing you injectable before-and-afters on a public page is breaking it. We are not going to break it to win your click."}}, {"@type": "Question", "name": "So can I see results at all?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. After your consultation, Tracey will give you an access code for the private client gallery, where you can see real results from real clients with the context to understand what you are looking at. She can also walk you through relevant results in person at your appointment."}}, {"@type": "Question", "name": "Are the results in the gallery real?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Every image is a Bonnie Lass client treated by Tracey, published with their written consent, shot at the same angle and in the same lighting. Individual results vary, and yours will depend on your face, your skin and your history."}}, {"@type": "Question", "name": "Can you guarantee I will get the same result?", "acceptedAnswer": {"@type": "Answer", "text": "No, and nobody honestly can. Individual results vary and are not guaranteed. Any procedure carries risks, and those will be discussed with you before you consent to anything."}}, {"@type": "Question", "name": "Where are you?", "acceptedAnswer": {"@type": "Answer", "text": "44 Smith Street, Melton VIC 3337, in Melbourne's outer west."}}, {"@type": "Question", "name": "What are your hours?", "acceptedAnswer": {"@type": "Answer", "text": "Open seven days, 9am to 7pm, by appointment only."}}, {"@type": "Question", "name": "How do I book?", "acceptedAnswer": {"@type": "Answer", "text": "Book online through our booking system any time, or call 0434 710 010. The free 15 minute consultation can be booked the same way."}}, {"@type": "Question", "name": "Do you see men?", "acceptedAnswer": {"@type": "Answer", "text": "Yes."}}]}</script>
+<style>/* brand logo */.brandmark{display:inline-flex;align-items:center}.brandmark img.brandlogo{height:48px;width:auto;display:block}.brandmark img.brandlogo-dark{display:none}header.scrolled .brandmark img.brandlogo-light,header.solid .brandmark img.brandlogo-light{display:none}header.scrolled .brandmark img.brandlogo-dark,header.solid .brandmark img.brandlogo-dark{display:block}.foot-brand img.brandlogo-foot{height:46px;width:auto;display:block;margin-bottom:12px}</style>
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<header id="hdr">
+  <div class="wrap nav">
+    <a href="#top" class="brandmark" aria-label="Bonnie Lass Beauty"><img class="brandlogo brandlogo-light" src="assets/logo-white.png" alt="Bonnie Lass Beauty"><img class="brandlogo brandlogo-dark" src="assets/logo-black.png" alt=""></a>
+    <nav class="nav-links" id="navlinks">
+      <a href="#concerns">Your Skin</a>
+      <a href="#assessment">Free Assessment</a>
+      <a href="treatments/">Treatments &amp; Prices</a>
+      <a href="#tracey">Nurse Tracey</a>
+      <a href="#faq">Q&amp;A</a>
+      <a href="#visit">Visit</a>
+    </nav>
+    <a href="https://bookings.gettimely.com/bonnielassbeauty/book" class="nav-cta" target="_blank" rel="noopener">Book Now</a>
+    <button class="burger" id="burger" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="top">
+  <div class="hero-media">
+    <img src="assets/hero.jpg" alt="Nurse Tracey and the team at Bonnie Lass Beauty, Melton" fetchpriority="high">
+  </div>
+  <div class="wrap hero-inner">
+    <p class="eyebrow on-dark">Cosmetic Nursing &amp; Skin &middot; Melton, Victoria</p>
+    <h1>Skin recovery, <em>at your own pace.</em></h1>
+    <p class="lede">
+      Skin changes. Through perimenopause, after weight loss, with time. Nurse Tracey has spent
+      thirty years in medicine learning to read it, and she will tell you honestly what will help
+      and what will not.
+    </p>
+    <div class="hero-actions">
+      <a href="#assessment" class="btn btn-gold">Take the free skin assessment</a>
+      <a href="#concerns" class="btn btn-line-light">Find your concern</a>
+    </div>
+  </div>
+  <div class="hero-meta">
+    <div class="wrap">
+      <div class="hero-meta-inner">
+        <span>Registered Cosmetic Nurse</span>
+        <span>30+ years in medicine</span>
+        <span>Open 7 days by appointment</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SKIN CONCERNS ============ -->
+<section class="stories" id="concerns">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Where most of our clients start</p>
+      <h2>Start with what you are <em>actually seeing</em></h2>
+      <p>
+        Most people arrive not knowing what happened, only that the face in the mirror stopped
+        matching the person behind it. Find yours below.
+      </p>
+    </div>
+
+    <div class="story-grid">
+      <article class="story reveal">
+        <a href="concerns/perimenopausal-skin/" class="story-img">
+          <img src="assets/concern-perimenopause.jpg" alt="Perimenopausal skin treatment in Melton" loading="lazy">
+        </a>
+        <div class="story-body">
+          <p class="story-kicker">The hormonal shift</p>
+          <h3><a href="concerns/perimenopausal-skin/">Perimenopausal skin</a></h3>
+          <p>It is not your imagination, and it is not your skincare. When oestrogen falls, collagen goes with it - and the routine that worked for twenty years stops working almost overnight.</p>
+          <a href="concerns/perimenopausal-skin/" class="story-link">Read about perimenopausal skin &rarr;</a>
+        </div>
+      </article>
+
+      <article class="story reveal">
+        <a href="concerns/skin-laxity-after-weight-loss/" class="story-img">
+          <img src="assets/concern-weightloss.jpg" alt="Skin laxity after weight loss treatment in Melton" loading="lazy">
+        </a>
+        <div class="story-body">
+          <p class="story-kicker">After the weight comes off</p>
+          <h3><a href="concerns/skin-laxity-after-weight-loss/">Skin laxity after weight loss</a></h3>
+          <p>The weight came off, and people started asking if you were unwell. Nobody told you the face goes first.</p>
+          <a href="concerns/skin-laxity-after-weight-loss/" class="story-link">Read about skin laxity after weight loss &rarr;</a>
+        </div>
+      </article>
+
+      <article class="story reveal">
+        <a href="concerns/pigmentation-and-sun-damage/" class="story-img">
+          <img src="assets/clinic-3.jpg" alt="Pigmentation and sun damage treatment in Melton" loading="lazy">
+        </a>
+        <div class="story-body">
+          <p class="story-kicker">The Australian tax</p>
+          <h3><a href="concerns/pigmentation-and-sun-damage/">Pigmentation and sun damage</a></h3>
+          <p>Sun damage does not arrive on schedule. It sits under the skin for decades and then surfaces all at once, usually in your forties.</p>
+          <a href="concerns/pigmentation-and-sun-damage/" class="story-link">Read about pigmentation and sun damage &rarr;</a>
+        </div>
+      </article>
+    </div>
+
+    <div class="more-concerns">
+      <p class="mc-label">We also treat</p>
+      <div class="mc-links">
+        <a href="concerns/acne-scarring-and-texture/">Acne scarring and texture</a>
+        <a href="concerns/volume-loss-and-hollowing/">Volume loss and hollowing</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SKIN QUIZ ============ -->
+<section class="assess" id="assessment">
+  <div class="wrap">
+    <div class="assess-grid">
+      <div>
+        <p class="eyebrow on-dark">Free &middot; 60 seconds &middot; No obligation</p>
+        <h2>The free <em>skin assessment</em></h2>
+        <p class="lede">
+          Answer five questions about your skin and we will send you back a straight read on what is
+          actually going on, what would help most, and what order to do it in - a plan that fits you
+          rather than a menu. Written by a nurse of
+          thirty years, not a chatbot.
+        </p>
+        <ol class="assess-steps">
+          <li>
+            <span class="num">01</span>
+            <span><strong>Tell us what you are seeing</strong>The change you noticed. The thing you keep looking at.</span>
+          </li>
+          <li>
+            <span class="num">02</span>
+            <span><strong>We map it against what causes it</strong>Hormones, weight loss, sun, time. They do different damage and need different answers.</span>
+          </li>
+          <li>
+            <span class="num">03</span>
+            <span><strong>You get your priorities, in order</strong>What matters first, what can wait, and what you can ignore entirely.</span>
+          </li>
+        </ol>
+        <figure class="assess-figure">
+          <img src="assets/quiz.jpg" alt="Facial analysis chart used in assessment at Bonnie Lass Beauty" loading="lazy">
+        </figure>
+      </div>
+
+      <aside class="quiz" id="quiz">
+        <div class="quiz-progress"><span id="qbar"></span></div>
+
+        <!-- STEP 1 -->
+        <div class="qstep active" data-step="1">
+          <p class="qcount">Question 1 of 5</p>
+          <h3>What is bothering you most when you look in the mirror?</h3>
+          <p class="qhint">Choose as many as you like.</p>
+          <div class="qopts" data-multi="true" data-key="concerns">
+            <button type="button" class="qopt" data-val="Loss of firmness / sagging">Loss of firmness or sagging</button>
+            <button type="button" class="qopt" data-val="Fine lines and wrinkles">Fine lines and wrinkles</button>
+            <button type="button" class="qopt" data-val="Dull, rough or crepey texture">Dull, rough or crepey texture</button>
+            <button type="button" class="qopt" data-val="Pigmentation / uneven tone">Pigmentation or uneven tone</button>
+            <button type="button" class="qopt" data-val="Hollowness / volume loss">Hollowness or volume loss</button>
+            <button type="button" class="qopt" data-val="Acne scarring / large pores">Acne scarring or large pores</button>
+            <button type="button" class="qopt" data-val="Thinning hair">Thinning hair</button>
+          </div>
+          <button class="btn btn-gold qnext" data-next="2" disabled>Continue</button>
+        </div>
+
+        <!-- STEP 2 -->
+        <div class="qstep" data-step="2">
+          <p class="qcount">Question 2 of 5</p>
+          <h3>Has anything changed for you recently?</h3>
+          <p class="qhint">This is the question most clinics never ask. It changes the answer completely.</p>
+          <div class="qopts" data-key="trigger">
+            <button type="button" class="qopt" data-val="Perimenopause or menopause">I am in perimenopause or menopause</button>
+            <button type="button" class="qopt" data-val="Significant weight loss">I have lost a significant amount of weight</button>
+            <button type="button" class="qopt" data-val="Pregnancy or post-natal">Pregnancy or post-natal</button>
+            <button type="button" class="qopt" data-val="Years of sun exposure">Years of sun, and it is showing</button>
+            <button type="button" class="qopt" data-val="Nothing specific - just time">Nothing specific, just time</button>
+          </div>
+          <div class="qnav"><button class="qback" data-back="1">Back</button></div>
+        </div>
+
+        <!-- STEP 3 -->
+        <div class="qstep" data-step="3">
+          <p class="qcount">Question 3 of 5</p>
+          <h3>What would a good result actually look like?</h3>
+          <div class="qopts" data-key="goal">
+            <button type="button" class="qopt" data-val="Look rested, not done">To look rested. Not done, not obvious.</button>
+            <button type="button" class="qopt" data-val="Restore what I have lost">To get back what I feel I have lost</button>
+            <button type="button" class="qopt" data-val="Slow down what is coming">To slow down what is coming</button>
+            <button type="button" class="qopt" data-val="Fix one specific thing">To fix one thing that really bothers me</button>
+          </div>
+          <div class="qnav"><button class="qback" data-back="2">Back</button></div>
+        </div>
+
+        <!-- STEP 4 -->
+        <div class="qstep" data-step="4">
+          <p class="qcount">Question 4 of 5</p>
+          <h3>Where are you up to?</h3>
+          <p class="qhint">Honestly. There is no wrong answer and nobody will chase you.</p>
+          <div class="qopts" data-key="readiness">
+            <button type="button" class="qopt" data-val="Ready to book now">I am ready to book</button>
+            <button type="button" class="qopt" data-val="Next month or two">Thinking about it, maybe next month or two</button>
+            <button type="button" class="qopt" data-val="Just gathering information">Just gathering information for now</button>
+          </div>
+          <div class="qnav"><button class="qback" data-back="3">Back</button></div>
+        </div>
+
+        <!-- STEP 5 -->
+        <div class="qstep" data-step="5">
+          <p class="qcount">Last one</p>
+          <h3>Where should we send your skin plan?</h3>
+          <p class="qhint">We will text you the short version and email the full one.</p>
+          <form id="qform" novalidate>
+            <label class="qfield">
+              <span>First name</span>
+              <input type="text" name="first_name" autocomplete="given-name" required>
+            </label>
+            <label class="qfield">
+              <span>Email</span>
+              <input type="email" name="email" autocomplete="email" required>
+            </label>
+            <label class="qfield">
+              <span>Mobile</span>
+              <input type="tel" name="phone" autocomplete="tel" placeholder="04XX XXX XXX" required>
+            </label>
+            <label class="qconsent">
+              <input type="checkbox" name="consent" required>
+              <span>Yes, send me my skin plan and occasional skin tips and offers from Bonnie Lass Beauty. I can unsubscribe any time.</span>
+            </label>
+            <p class="qerror" id="qerror" hidden></p>
+            <button type="submit" class="btn btn-gold" id="qsubmit">Get my skin plan</button>
+          </form>
+          <div class="qnav"><button class="qback" data-back="4">Back</button></div>
+        </div>
+
+        <!-- RESULT -->
+        <div class="qstep qresult" data-step="6">
+          <div class="qtick" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+              <path d="M20 6L9 17l-5-5"/>
+            </svg>
+          </div>
+          <h3 id="qrtitle">Your skin plan is on its way</h3>
+          <p class="qrlede" id="qrlede"></p>
+          <div class="qrbox">
+            <p class="qrlabel">What we would look at first</p>
+            <p id="qrfocus"></p>
+          </div>
+          <a href="https://bookings.gettimely.com/bonnielassbeauty/book" class="btn btn-gold" target="_blank" rel="noopener">Book your free 15 minute consult</a>
+          <p class="fineprint">
+            Your plan is a starting point, not a diagnosis. Everything is confirmed in person with
+            Tracey, and a consultation is required before any treatment.
+          </p>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TREATMENTS TEASER ============ -->
+<section id="treatments" class="tease">
+  <div class="wrap tease-grid">
+    <div>
+      <p class="eyebrow">What we do</p>
+      <h2>Treatments, and what they <em>honestly</em> cost</h2>
+      <p class="tease-lede">
+        Where a treatment has a price, the price is on the page. Where it depends on your face, we
+        say so rather than guess. No hidden menu, no "from" prices that turn into something else
+        once you are in the chair.
+      </p>
+      <ul class="tease-list">
+        <li><span>Collagen &amp; skin quality</span><strong>from $245</strong></li>
+        <li><span>Microneedling &amp; courses</span><strong>from $245</strong></li>
+        <li><span>Advanced nurse treatments</span><strong>Consultation required</strong></li>
+        <li><span>Hair rejuvenation</span><strong>from $375</strong></li>
+      </ul>
+      <div class="tease-actions">
+        <a href="treatments/" class="btn btn-solid">See the full price menu</a>
+        <a href="#assessment" class="btn btn-line">Not sure? Take the assessment</a>
+      </div>
+    </div>
+    <figure class="tease-img">
+      <img src="assets/consult.jpg" alt="Consultation at Bonnie Lass Beauty, Melton" loading="lazy">
+    </figure>
+  </div>
+</section>
+
+<!-- ============ TRACEY ============ -->
+<section class="tracey" id="tracey">
+  <div class="wrap">
+    <div class="tracey-grid">
+      <div class="tracey-portrait reveal">
+        <img src="assets/tracey.jpg" alt="Nurse Tracey, Bonnie Lass Beauty" loading="lazy">
+      </div>
+      <div>
+        <p class="eyebrow">The person treating you</p>
+        <h2>Nurse Tracey</h2>
+        <p class="role">Cosmetic Nurse &middot; Melton, Victoria</p>
+
+        <p>
+          Thirty years in medicine before she ever picked up a cosmetic needle. Nursing, midwifery,
+          critical care, and a Masters as a Nurse Practitioner. That is a career spent looking after
+          people at the sharpest ends of their lives, and it is why the conversation here sounds
+          different from the one you get in a shopping centre.
+        </p>
+        <p>
+          Tracey has a special interest in full facial assessments, volume restoration, fine-line and
+          wrinkle prevention, and skin enrichment therapies. Her bias is towards restraint and towards
+          natural results - she would rather you left looking like yourself on your best day than like
+          somebody else entirely.
+        </p>
+        <p>
+          She will also tell you when the answer is no. That is the part clients remember.
+        </p>
+
+        <ul class="creds">
+          <li>Bachelor of Nursing and Bachelor of Midwifery</li>
+          <li>Post Graduate qualification in Critical Care</li>
+          <li>Masters in Nurse Practitioner</li>
+          <li>Over 30 years of experience in the medical field</li>
+          <li>Trained with Luxe Lips; ongoing training with the Anti-Aging group</li>
+        </ul>
+
+        <div class="rule"></div>
+        <a href="#assessment" class="btn btn-line">Take the free skin assessment</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CLINIC CAROUSEL ============ -->
+<section id="clinic">
+  <div class="wrap">
+    <div class="section-head center">
+      <p class="eyebrow">The clinic</p>
+      <h2>Small, private and <em>unhurried</em></h2>
+      <p>
+        One nurse, one client, and as long as it takes. You will not be processed here.
+      </p>
+    </div>
+  </div>
+
+  <div class="carousel" id="carousel">
+    <button class="car-btn prev" id="carprev" aria-label="Previous">&larr;</button>
+    <div class="car-track" id="cartrack">
+        <figure class="slide"><img src="assets/car-1.jpg" alt="Reception at Bonnie Lass Beauty" loading="lazy"><figcaption>Reception at Bonnie Lass Beauty</figcaption></figure>
+        <figure class="slide"><img src="assets/car-2.jpg" alt="The treatment room" loading="lazy"><figcaption>The treatment room</figcaption></figure>
+        <figure class="slide"><img src="assets/car-3.jpg" alt="Nurse Tracey with a client" loading="lazy"><figcaption>Nurse Tracey with a client</figcaption></figure>
+        <figure class="slide"><img src="assets/car-4.jpg" alt="Skincare in clinic" loading="lazy"><figcaption>Skincare in clinic</figcaption></figure>
+        <figure class="slide"><img src="assets/car-5.jpg" alt="A treatment in progress" loading="lazy"><figcaption>A treatment in progress</figcaption></figure>
+        <figure class="slide"><img src="assets/car-6.jpg" alt="Consultation at Bonnie Lass Beauty" loading="lazy"><figcaption>Consultation at Bonnie Lass Beauty</figcaption></figure>
+        <figure class="slide"><img src="assets/car-7.jpg" alt="Treatment detail" loading="lazy"><figcaption>Treatment detail</figcaption></figure>
+        <figure class="slide"><img src="assets/car-8.jpg" alt="Tracey treating a client" loading="lazy"><figcaption>Tracey treating a client</figcaption></figure>
+        <figure class="slide"><img src="assets/car-9.jpg" alt="In the chair" loading="lazy"><figcaption>In the chair</figcaption></figure>
+        <figure class="slide"><img src="assets/car-10.jpg" alt="Clinic detail" loading="lazy"><figcaption>Clinic detail</figcaption></figure>
+    </div>
+    <button class="car-btn next" id="carnext" aria-label="Next">&rarr;</button>
+  </div>
+
+  <div class="wrap">
+    <div class="car-dots" id="cardots"></div>
+  </div>
+</section>
+
+<!-- ============ RESULTS (GATED) ============ -->
+<section class="results" id="results">
+  <div class="wrap">
+    <div class="lock-icon" aria-hidden="true">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
+        <rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/>
+      </svg>
+    </div>
+    <p class="eyebrow on-dark">Client results</p>
+    <h2>Our before and afters are <em>behind a door</em></h2>
+    <p>
+      We have them. Plenty of them. But Australian law does not allow a clinic to show you before and
+      after images of prescription treatments on a public website, and we are not going to pretend
+      otherwise to win your click.
+    </p>
+    <p>
+      After your consultation, Tracey will give you access. You will see real results from real
+      clients, relevant to your face and your concern, with the context to understand what you are
+      looking at.
+    </p>
+    <div class="rule center"></div>
+    <a href="gallery/" class="btn btn-gold">I have an access code</a>
+    <p class="results-note">
+      Access is provided to clients following a consultation, in accordance with AHPRA and TGA
+      advertising requirements for prescription-only treatments. Individual results vary and are not
+      guaranteed. Any procedure carries risks, which will be discussed with you.
+    </p>
+  </div>
+</section>
+
+<!-- ============ RETAIL ============ -->
+<section class="brands">
+  <div class="wrap">
+    <div class="section-head center">
+      <p class="eyebrow">In clinic</p>
+      <h2>The skincare we actually <em>stand behind</em></h2>
+      <p>
+        Prescribed to your skin at your assessment, not sold off a shelf. Most people need fewer
+        products than they have been told.
+      </p>
+    </div>
+    <div class="brand-row">
+      <span>DermaQuest</span>
+      <span>Aspect</span>
+      <span>Cosmedix</span>
+      <span>Societe</span>
+      <span>BIOJUVE</span>
+      <span>PCA Skin</span>
+      <span>Vida Glow</span>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============ Q&A ============ -->
+<section class="qa" id="faq">
+  <div class="wrap">
+    <div class="section-head center">
+      <p class="eyebrow">Questions</p>
+      <h2>Everything people ask, <em>answered honestly</em></h2>
+      <p>
+        Including the ones clinics normally avoid. If your question is not here, call
+        <a href="tel:+61434710010">0434 710 010</a> and ask it.
+      </p>
+    </div>
+
+    <div class="faq-tabs">
+        <button class="faq-tab active" data-fg="fg-0">Before you book</button>
+        <button class="faq-tab" data-fg="fg-1">The treatments</button>
+        <button class="faq-tab" data-fg="fg-2">Money</button>
+        <button class="faq-tab" data-fg="fg-3">Safety and aftercare</button>
+        <button class="faq-tab" data-fg="fg-4">Results and the gallery</button>
+        <button class="faq-tab" data-fg="fg-5">Getting here</button>
+    </div>
+
+      <div class="faq-group open" id="fg-0">
+        <h3 class="faq-group-title">Before you book</h3>
+        <div class="faq-list">
+          <details class="faq">
+            <summary>Do I have to know what I want before I come in?</summary>
+            <p>No, and most people do not. That is the entire point of the consultation. You come in, describe what you are seeing, and Tracey works out what is actually causing it. Plenty of people arrive able to say only that something has changed.</p>
+          </details>
+          <details class="faq">
+            <summary>What actually happens at the first appointment?</summary>
+            <p>A full facial assessment. Tracey looks at structure, laxity, texture, pigment and what has changed, then talks you through what she has found and what would help, in order of what would make the biggest difference. Every treatment at Bonnie Lass includes a free consultation, an individualised treatment plan, and a complimentary follow-up appointment to review your results.</p>
+          </details>
+          <details class="faq">
+            <summary>Will I be pressured into booking something?</summary>
+            <p>No. Tracey will tell you when the answer is skincare and sun protection, or nothing at all right now. Her position is that she would rather you trusted her than booked with her, and a consultation with no treatment is a legitimate outcome, not a failed sale.</p>
+          </details>
+          <details class="faq">
+            <summary>What if I am too embarrassed to say what is bothering me?</summary>
+            <p>Say it anyway. Tracey spent thirty years in nursing, midwifery and critical care before she came to aesthetics. There is genuinely nothing you can raise that will faze her, and the thing people are most embarrassed about is usually the thing most easily treated.</p>
+          </details>
+          <details class="faq">
+            <summary>Is the free skin assessment the same as a consultation?</summary>
+            <p>No. The assessment on this website is a short questionnaire that gives you a starting read on what is likely driving the change in your skin. The consultation is in person, with Tracey, looking at your actual face. The assessment is a useful first step, not a substitute.</p>
+          </details>
+        </div>
+      </div>
+      <div class="faq-group" id="fg-1">
+        <h3 class="faq-group-title">The treatments</h3>
+        <div class="faq-list">
+          <details class="faq">
+            <summary>Does it hurt?</summary>
+            <p>It varies by treatment, and Tracey will tell you honestly what to expect before you commit. Microneedling is uncomfortable rather than painful. PRX-Plus uses no needles at all. Discomfort is managed, and nobody is expected to grit their teeth through anything.</p>
+          </details>
+          <details class="faq">
+            <summary>How much downtime will I need?</summary>
+            <p>It depends on what you have. PRX-Plus is specifically a no-downtime treatment - there is no needling and no peeling, so you can have it and go back to work. Microneedling will leave you pink for a day or two. Injectable treatments may cause slight redness, swelling or tenderness in the treated area, which is expected and usually resolves within a few days.</p>
+          </details>
+          <details class="faq">
+            <summary>How many sessions will I actually need?</summary>
+            <p>More than one, for most things, and Tracey will give you the real number up front rather than after you have paid. Microneedling is at least three sessions two weeks apart. PRX-Plus is a course of three to five, two weeks apart. BYRYZN is three sessions four weeks apart. Bio-remodelling starts with two, four to six weeks apart. A single session of most of these is a taste, not a change.</p>
+          </details>
+          <details class="faq">
+            <summary>Will I look like I have had something done?</summary>
+            <p>That is the outcome we are actively trying to avoid. Tracey's stated bias is towards restraint and natural results, and most of the treatments relevant to skin quality change how your skin behaves rather than change your face. The aim is that people say you look well or rested, not that they can identify what you had.</p>
+          </details>
+          <details class="faq">
+            <summary>How long do results last?</summary>
+            <p>It depends entirely on the treatment. Some collagen-stimulating treatments build over weeks and hold for many months. Lifting threads lift from day one, with continued tightening over six to twelve weeks and results lasting twelve to eighteen months. Muscle-relaxing treatments typically last three to four months. Tracey will give you a realistic range rather than a best case.</p>
+          </details>
+          <details class="faq">
+            <summary>Can I have treatments in summer?</summary>
+            <p>Some, yes - which is unusual. PRX-Plus and BYRYZN are safe for all skin types and all seasons. Other resurfacing treatments are better saved for winter, and Tracey will tell you which is which rather than take your money in January.</p>
+          </details>
+        </div>
+      </div>
+      <div class="faq-group" id="fg-2">
+        <h3 class="faq-group-title">Money</h3>
+        <div class="faq-list">
+          <details class="faq">
+            <summary>Why do some treatments have a price and others do not?</summary>
+            <p>Because some are purchased and some are prescribed. Skin treatments like PRX-Plus, BYRYZN, Rejuran and microneedling have a fixed price, and it is published on this site. Injectable treatments depend on your face, the area and the amount required - quoting a number before Tracey has assessed you would be a guess, so we do not.</p>
+          </details>
+          <details class="faq">
+            <summary>Will I get a price before anything happens?</summary>
+            <p>Yes. You will know exactly what a treatment costs before you agree to it. Nobody is billed for a surprise.</p>
+          </details>
+          <details class="faq">
+            <summary>Are packages cheaper?</summary>
+            <p>Where a treatment genuinely needs a course, yes. The microneedling course of four with NCTF is $1,170, which saves $130. The exosome course of four is $1,350, saving $150. The packages exist because the course is what produces the result, not as a sales tactic.</p>
+          </details>
+          <details class="faq">
+            <summary>Do you offer gift vouchers?</summary>
+            <p>Yes. Ask in clinic or call 0434 710 010.</p>
+          </details>
+          <details class="faq">
+            <summary>What is the cheapest way to start?</summary>
+            <p>The free skin assessment, then the consultation. Both cost nothing, and Tracey will frequently tell you that the highest-value thing you can do is skincare and sun protection - which is the cheapest intervention there is.</p>
+          </details>
+        </div>
+      </div>
+      <div class="faq-group" id="fg-3">
+        <h3 class="faq-group-title">Safety and aftercare</h3>
+        <div class="faq-list">
+          <details class="faq">
+            <summary>Who performs the treatments?</summary>
+            <p>Nurse Tracey. She holds Bachelor's degrees in both Nursing and Midwifery, a Post Graduate qualification in Critical Care and a Masters as a Nurse Practitioner, with over thirty years of experience in the medical field. Some procedures also require a pre-treatment video call with a cosmetic doctor, and Tracey will arrange that.</p>
+          </details>
+          <details class="faq">
+            <summary>Is everyone suitable for treatment?</summary>
+            <p>No, and that matters. A consultation with a registered nurse is required before any procedure specifically to assess whether you are a suitable candidate. Some people are not, and they will be told so.</p>
+          </details>
+          <details class="faq">
+            <summary>What should I do after a treatment?</summary>
+            <p>You will be given specific instructions for what you have had. After volume restoring treatments, the general advice is to keep the area clean, avoid heavy oil-based creams and makeup while healing, avoid heat and direct UV, avoid exercise for 24 to 48 hours, avoid alcohol for the first 24 hours, avoid AHAs, BHAs, retinol and vitamin C for 24 hours, avoid laser, microdermabrasion and chemical peels for two weeks, sleep on your back for the first few nights, and take paracetamol rather than ibuprofen or aspirin if you need pain relief. No flights for 72 hours.</p>
+          </details>
+          <details class="faq">
+            <summary>Is lumpiness normal afterwards?</summary>
+            <p>After volume restoring treatments, lumpiness and unevenness in the first two weeks is normal - the product takes time to integrate with your own tissue and lumps soften over time. Book a follow-up appointment for two weeks after the procedure to check everything is settling as it should. If anything worries you before then, call the clinic.</p>
+          </details>
+          <details class="faq">
+            <summary>What if something does not look right?</summary>
+            <p>Call the clinic on 0434 710 010. Do not sit at home worrying about it. If you experience any unusual symptoms, seek medical assistance.</p>
+          </details>
+          <details class="faq">
+            <summary>Do I get a follow-up?</summary>
+            <p>Yes. A complimentary follow-up appointment to review your results is included with every treatment.</p>
+          </details>
+        </div>
+      </div>
+      <div class="faq-group" id="fg-4">
+        <h3 class="faq-group-title">Results and the gallery</h3>
+        <div class="faq-list">
+          <details class="faq">
+            <summary>Why can I not see before and after photos on your website?</summary>
+            <p>Because Australian law does not permit clinics to advertise before and after images of prescription-only treatments to the public. That is an AHPRA and TGA advertising requirement, and any clinic showing you injectable before-and-afters on a public page is breaking it. We are not going to break it to win your click.</p>
+          </details>
+          <details class="faq">
+            <summary>So can I see results at all?</summary>
+            <p>Yes. After your consultation, Tracey will give you an access code for the private client gallery, where you can see real results from real clients with the context to understand what you are looking at. She can also walk you through relevant results in person at your appointment.</p>
+          </details>
+          <details class="faq">
+            <summary>Are the results in the gallery real?</summary>
+            <p>Yes. Every image is a Bonnie Lass client treated by Tracey, published with their written consent, shot at the same angle and in the same lighting. Individual results vary, and yours will depend on your face, your skin and your history.</p>
+          </details>
+          <details class="faq">
+            <summary>Can you guarantee I will get the same result?</summary>
+            <p>No, and nobody honestly can. Individual results vary and are not guaranteed. Any procedure carries risks, and those will be discussed with you before you consent to anything.</p>
+          </details>
+        </div>
+      </div>
+      <div class="faq-group" id="fg-5">
+        <h3 class="faq-group-title">Getting here</h3>
+        <div class="faq-list">
+          <details class="faq">
+            <summary>Where are you?</summary>
+            <p>44 Smith Street, Melton VIC 3337, in Melbourne's outer west.</p>
+          </details>
+          <details class="faq">
+            <summary>What are your hours?</summary>
+            <p>Open seven days, 9am to 7pm, by appointment only.</p>
+          </details>
+          <details class="faq">
+            <summary>How do I book?</summary>
+            <p>Book online through our booking system any time, or call 0434 710 010. The free 15 minute consultation can be booked the same way.</p>
+          </details>
+          <details class="faq">
+            <summary>Do you see men?</summary>
+            <p>Yes.</p>
+          </details>
+        </div>
+      </div>
+  </div>
+</section>
+
+<!-- ============ VISIT ============ -->
+<section class="visit" id="visit">
+  <div class="wrap">
+    <div class="visit-grid">
+      <div>
+        <p class="eyebrow">Visit</p>
+        <h2>44 Smith Street, <em>Melton</em></h2>
+        <ul class="visit-details">
+          <li>
+            <span class="label">Address</span>
+            <span class="val">
+              <a href="https://maps.google.com/?q=44+Smith+Street+Melton+VIC+3337" target="_blank" rel="noopener">44 Smith Street, Melton VIC 3337</a>
+            </span>
+          </li>
+          <li>
+            <span class="label">Phone</span>
+            <span class="val"><a href="tel:+61434710010">0434 710 010</a></span>
+          </li>
+          <li>
+            <span class="label">Email</span>
+            <span class="val"><a href="mailto:hello@bonnielassbeauty.com.au">hello@bonnielassbeauty.com.au</a></span>
+          </li>
+          <li>
+            <span class="label">Hours</span>
+            <span class="val">Open 7 days, 9am - 7pm<small>By appointment only</small></span>
+          </li>
+          <li>
+            <span class="label">Booking</span>
+            <span class="val"><a href="https://bookings.gettimely.com/bonnielassbeauty/book" target="_blank" rel="noopener">Book online, any time</a></span>
+          </li>
+        </ul>
+        <div class="rule"></div>
+        <a href="https://bookings.gettimely.com/bonnielassbeauty/book" class="btn btn-solid" target="_blank" rel="noopener">Book an appointment</a>
+      </div>
+      <div>
+        <iframe
+          class="map"
+          src="https://www.google.com/maps?q=44%20Smith%20Street%2C%20Melton%20VIC%203337&output=embed"
+          title="Bonnie Lass Beauty, 44 Smith Street, Melton VIC 3337"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <img class="brandlogo-foot" src="assets/logo-gold.png" alt="">
+        Bonnie Lass <em>Beauty</em>
+        <span>Skin recovery, at your own pace.</span>
+      </div>
+      <nav class="foot-nav">
+        <a href="#concerns">Your Skin</a>
+        <a href="#assessment">Free Assessment</a>
+        <a href="treatments/">Treatments &amp; Prices</a>
+        <a href="#tracey">Nurse Tracey</a>
+        <a href="#faq">Q&amp;A</a>
+        <a href="gallery/">Client Results</a>
+        <a href="#visit">Visit</a>
+        <a href="https://bookings.gettimely.com/bonnielassbeauty/book" target="_blank" rel="noopener">Book</a>
+      </nav>
+    </div>
+
+    <p class="compliance">
+      Bonnie Lass Beauty provides cosmetic treatments under the care of a registered nurse. All
+      procedures require a consultation to assess your individual suitability, and some require a
+      consultation with a medical practitioner. Any procedure carries risks. Individual results vary
+      and are not guaranteed. This website does not provide medical advice and is not a substitute
+      for a consultation.
+    </p>
+
+    <div class="foot-bottom">
+      <span>&copy; 2026 Bonnie Lass Beauty. 44 Smith Street, Melton VIC 3337.</span>
+      <span>0434 710 010 &middot; hello@bonnielassbeauty.com.au</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Nav on scroll
+  var hdr = document.getElementById('hdr');
+  var onScroll = function () {
+    if (window.scrollY > 60) hdr.classList.add('scrolled');
+    else hdr.classList.remove('scrolled');
+  };
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  // Burger
+  var burger = document.getElementById('burger');
+  var navlinks = document.getElementById('navlinks');
+  burger.addEventListener('click', function () {
+    var open = navlinks.classList.toggle('open');
+    burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+    hdr.classList.add('scrolled');
+  });
+  navlinks.addEventListener('click', function (e) {
+    if (e.target.tagName === 'A') {
+      navlinks.classList.remove('open');
+      burger.setAttribute('aria-expanded', 'false');
+    }
+  });
+
+  // Treatment tabs
+  var tabs = document.querySelectorAll('.treat-tab');
+  tabs.forEach(function (tab) {
+    tab.addEventListener('click', function () {
+      document.querySelectorAll('.treat-tab').forEach(function (t) { t.classList.remove('active'); });
+      document.querySelectorAll('.treat-panel').forEach(function (p) { p.classList.remove('active'); });
+      tab.classList.add('active');
+      document.getElementById(tab.dataset.panel).classList.add('active');
+    });
+  });
+
+  // ---------- SKIN QUIZ ----------
+  // Where leads land. Paste the GHL inbound webhook URL here to go live.
+  var LEAD_ENDPOINT = "";
+
+  var answers = { concerns: [], trigger: "", goal: "", readiness: "" };
+
+  function showStep(n) {
+    document.querySelectorAll('.qstep').forEach(function (s) { s.classList.remove('active'); });
+    var el = document.querySelector('.qstep[data-step="' + n + '"]');
+    if (el) el.classList.add('active');
+    var bar = document.getElementById('qbar');
+    if (bar) bar.style.width = Math.min(n, 5) * 20 + '%';
+    var quiz = document.getElementById('quiz');
+    if (quiz && n > 1) quiz.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+
+  document.querySelectorAll('.qopts').forEach(function (group) {
+    var key = group.dataset.key;
+    var multi = group.dataset.multi === 'true';
+    group.querySelectorAll('.qopt').forEach(function (opt) {
+      opt.addEventListener('click', function () {
+        if (multi) {
+          opt.classList.toggle('sel');
+          answers[key] = Array.prototype.slice
+            .call(group.querySelectorAll('.qopt.sel'))
+            .map(function (o) { return o.dataset.val; });
+          var nextBtn = group.parentElement.querySelector('.qnext');
+          if (nextBtn) nextBtn.disabled = answers[key].length === 0;
+        } else {
+          group.querySelectorAll('.qopt').forEach(function (o) { o.classList.remove('sel'); });
+          opt.classList.add('sel');
+          answers[key] = opt.dataset.val;
+          var step = parseInt(group.closest('.qstep').dataset.step, 10);
+          setTimeout(function () { showStep(step + 1); }, 260);
+        }
+      });
+    });
+  });
+
+  document.querySelectorAll('.qnext').forEach(function (b) {
+    b.addEventListener('click', function () { showStep(parseInt(b.dataset.next, 10)); });
+  });
+  document.querySelectorAll('.qback').forEach(function (b) {
+    b.addEventListener('click', function () { showStep(parseInt(b.dataset.back, 10)); });
+  });
+
+  var FOCUS = {
+    "Perimenopause or menopause":
+      "Collagen loss driven by falling oestrogen. We would look at skin quality and firmness first - the treatments that rebuild collagen rather than sit on top of it - before anything else.",
+    "Significant weight loss":
+      "Facial volume loss and skin laxity. Weight comes off the face first, and the skin does not always shrink to meet it. We would look at restoring structure and rebuilding skin quality, in that order.",
+    "Pregnancy or post-natal":
+      "Pigmentation and barrier changes are the usual pattern, and much of it settles on its own. We would look at what is likely to resolve before treating anything.",
+    "Years of sun exposure":
+      "Pigment, texture and collagen damage. We would start with the skin itself - resurfacing and collagen stimulation - and protect what we rebuild.",
+    "Nothing specific - just time":
+      "Gradual collagen decline. The most useful thing here is prevention and skin quality, which is also the cheapest place to start."
+  };
+
+  var form = document.getElementById('qform');
+  if (form) {
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var err = document.getElementById('qerror');
+      var btn = document.getElementById('qsubmit');
+      err.hidden = true;
+
+      var fd = new FormData(form);
+      var name = (fd.get('first_name') || '').toString().trim();
+      var email = (fd.get('email') || '').toString().trim();
+      var phone = (fd.get('phone') || '').toString().replace(/\s+/g, '');
+
+      var EMAIL_RE = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
+      var MOBILE_RE = /^(\+?61|0)4\d{8}$/;
+
+      if (!name) { err.textContent = 'Please add your first name.'; err.hidden = false; return; }
+      if (!EMAIL_RE.test(email)) { err.textContent = 'That email does not look right.'; err.hidden = false; return; }
+      if (!MOBILE_RE.test(phone)) { err.textContent = 'Please enter a valid Australian mobile, e.g. 0412 345 678.'; err.hidden = false; return; }
+      if (!fd.get('consent')) { err.textContent = 'Please tick the box so we can send your plan.'; err.hidden = false; return; }
+
+      if (phone.charAt(0) === '0') { phone = '+61' + phone.slice(1); }
+      else if (phone.charAt(0) === '6') { phone = '+' + phone; }
+
+      var payload = {
+        first_name: name,
+        email: email,
+        phone: phone,
+        source: 'Website skin quiz',
+        concerns: answers.concerns.join(', '),
+        trigger: answers.trigger,
+        goal: answers.goal,
+        readiness: answers.readiness,
+        tags: ['skin-quiz', 'readiness: ' + (answers.readiness || 'unknown')]
+      };
+
+      btn.disabled = true;
+      btn.textContent = 'Sending...';
+
+      var done = function () {
+        document.getElementById('qrlede').textContent =
+          name + ', we have sent your plan to ' + email + '. Here is the short version.';
+        document.getElementById('qrfocus').textContent =
+          FOCUS[answers.trigger] || 'We would start with a full facial assessment to see what is actually driving the change, then treat in order of what will make the biggest difference.';
+        showStep(6);
+      };
+
+      if (!LEAD_ENDPOINT) {
+        console.warn('[skin-quiz] LEAD_ENDPOINT is not set - lead was NOT delivered', payload);
+        done();
+        return;
+      }
+
+      fetch(LEAD_ENDPOINT, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      }).then(done).catch(function () {
+        err.textContent = 'Something went wrong sending that. Please call us on 0434 710 010.';
+        err.hidden = false;
+        btn.disabled = false;
+        btn.textContent = 'Get my skin plan';
+      });
+    });
+  }
+
+  // ---------- CLINIC CAROUSEL ----------
+  (function () {
+    var track = document.getElementById('cartrack');
+    if (!track) return;
+    var slides = track.querySelectorAll('.slide');
+    var dots = document.getElementById('cardots');
+    var prev = document.getElementById('carprev');
+    var next = document.getElementById('carnext');
+
+    function step() {
+      var s = slides[0];
+      if (!s) return 400;
+      return s.getBoundingClientRect().width + 18;
+    }
+
+    slides.forEach(function (_, i) {
+      var b = document.createElement('button');
+      b.setAttribute('aria-label', 'Go to image ' + (i + 1));
+      if (i === 0) b.classList.add('on');
+      b.addEventListener('click', function () { track.scrollTo({ left: i * step(), behavior: 'smooth' }); });
+      dots.appendChild(b);
+    });
+
+    prev.addEventListener('click', function () { track.scrollBy({ left: -step(), behavior: 'smooth' }); });
+    next.addEventListener('click', function () { track.scrollBy({ left: step(), behavior: 'smooth' }); });
+
+    var raf;
+    track.addEventListener('scroll', function () {
+      cancelAnimationFrame(raf);
+      raf = requestAnimationFrame(function () {
+        var i = Math.round(track.scrollLeft / step());
+        dots.querySelectorAll('button').forEach(function (d, j) {
+          d.classList.toggle('on', j === i);
+        });
+      });
+    }, { passive: true });
+  })();
+
+  // ---------- Q&A TABS ----------
+  document.querySelectorAll('.faq-tab').forEach(function (tab) {
+    tab.addEventListener('click', function () {
+      document.querySelectorAll('.faq-tab').forEach(function (t) { t.classList.remove('active'); });
+      document.querySelectorAll('.faq-group').forEach(function (g) { g.classList.remove('open'); });
+      tab.classList.add('active');
+      var g = document.getElementById(tab.dataset.fg);
+      if (g) g.classList.add('open');
+    });
+  });
+
+  // Reveal on scroll
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
+  } else {
+    document.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('in'); });
+  }
+</script>
+
+</body>
+</html>
