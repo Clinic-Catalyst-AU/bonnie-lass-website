@@ -154,6 +154,9 @@ section { padding: clamp(70px, 9vw, 110px) 0; }
 .prose-block h2 { font-size: clamp(26px, 3.2vw, 36px); margin-bottom: 14px; }
 .prose-block p { color: var(--ink-soft); }
 .prose-block p + p { margin-top: 16px; }
+.side-media { margin-bottom: 22px; border-radius: 12px; overflow: hidden; }
+.side-media img { width: 100%; height: auto; display: block; }
+.side-media figcaption { font-size: 12.5px; line-height: 1.6; color: var(--muted); padding: 10px 2px 0; }
 
 .section-head { max-width: 660px; margin-bottom: 50px; }
 .section-head h2 { font-size: clamp(30px, 4.2vw, 46px); margin-bottom: 16px; }
