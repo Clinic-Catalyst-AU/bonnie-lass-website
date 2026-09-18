@@ -1622,17 +1622,27 @@
       btn.disabled = true;
       btn.textContent = 'Sending...';
 
+      var focusLine = function () {
+        document.getElementById('qrfocus').textContent =
+          FOCUS[answers.trigger] || 'We would start with a full facial assessment to see what is actually driving the change, then treat in order of what will make the biggest difference.';
+      };
+
       var done = function () {
         document.getElementById('qrlede').textContent =
           name + ', we have sent your plan to ' + email + '. Here is the short version.';
-        document.getElementById('qrfocus').textContent =
-          FOCUS[answers.trigger] || 'We would start with a full facial assessment to see what is actually driving the change, then treat in order of what will make the biggest difference.';
+        focusLine();
         showStep(6);
       };
 
+      // No endpoint configured yet. Show the result, but do NOT tell them we have
+      // emailed it - nothing was sent and nobody was notified. Point them at a
+      // real next step instead.
       if (!LEAD_ENDPOINT) {
         console.warn('[skin-quiz] LEAD_ENDPOINT is not set - lead was NOT delivered', payload);
-        done();
+        document.getElementById('qrlede').textContent =
+          name + ', here is your plan. To go through it properly with Tracey, book a free consult or call the clinic on 0434 710 010.';
+        focusLine();
+        showStep(6);
         return;
       }
 

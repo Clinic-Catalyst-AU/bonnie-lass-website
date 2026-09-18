@@ -154,6 +154,10 @@ section { padding: clamp(70px, 9vw, 110px) 0; }
 .prose-block h2 { font-size: clamp(26px, 3.2vw, 36px); margin-bottom: 14px; }
 .prose-block p { color: var(--ink-soft); }
 .prose-block p + p { margin-top: 16px; }
+.prose-duo { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 40px 0 46px; max-width: 720px; }
+.prose-duo figure { margin: 0; border-radius: 12px; overflow: hidden; }
+.prose-duo img { width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; aspect-ratio: 4 / 5; }
+@media (max-width: 640px) { .prose-duo { grid-template-columns: 1fr; gap: 12px; } }
 .side-media { margin-bottom: 22px; border-radius: 12px; overflow: hidden; }
 .side-media img { width: 100%; height: auto; display: block; }
 .side-media figcaption { font-size: 12.5px; line-height: 1.6; color: var(--muted); padding: 10px 2px 0; }
