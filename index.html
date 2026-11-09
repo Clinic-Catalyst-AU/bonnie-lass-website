@@ -715,6 +715,34 @@
     color: rgba(255,253,250,0.34); max-width: 780px;
   }
 
+
+  /* ---------- REVIEWS ---------- */
+  .reviews { background: var(--ivory); }
+  .reviews .section-head { max-width: 720px; }
+  .rv-feature {
+    position: relative; background: var(--ink); color: rgba(255,253,250,0.86);
+    padding: clamp(40px, 5vw, 64px) clamp(28px, 5vw, 72px); margin-bottom: 28px; overflow: hidden;
+  }
+  .rv-feature::after { content: ''; position: absolute; inset: 0; background: url(assets/texture-ivory.jpg) center / cover no-repeat; mix-blend-mode: soft-light; opacity: .5; pointer-events: none; }
+  .rv-feature > * { position: relative; z-index: 1; }
+  .rv-feature .rv-mark { color: var(--gold-pale); }
+  .rv-feature p { font-family: var(--display); font-size: clamp(19px, 2.1vw, 24px); line-height: 1.5; font-weight: 300; max-width: 62ch; }
+  .rv-feature p + p { margin-top: 16px; }
+  .rv-feature .rv-who { color: var(--gold-pale); }
+  .rv-grid { columns: 3; column-gap: 24px; }
+  .rv-card {
+    break-inside: avoid; background: var(--white); border: 1px solid var(--line);
+    padding: 34px 32px 30px; margin-bottom: 24px; position: relative;
+  }
+  .rv-mark { font-family: var(--display); font-size: 54px; line-height: .6; color: var(--gold); display: block; margin-bottom: 18px; }
+  .rv-card p { font-size: 15.5px; line-height: 1.75; color: var(--ink-soft); }
+  .rv-who { display: block; margin-top: 22px; font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold-deep); }
+  .rv-who small { display: block; letter-spacing: 0.08em; text-transform: none; color: var(--muted); font-size: 12px; margin-top: 4px; }
+  .rv-foot { margin-top: 34px; display: flex; flex-wrap: wrap; gap: 18px 36px; align-items: center; justify-content: space-between; }
+  .rv-note { font-size: 13px; line-height: 1.7; color: var(--muted); max-width: 64ch; }
+  @media (max-width: 1100px) { .rv-grid { columns: 2; } }
+  @media (max-width: 760px) { .rv-grid { columns: 1; } .rv-feature p { font-size: 18px; } }
+
   /* ---------- MOBILE ---------- */
   @media (max-width: 1180px) {
     .nav-links { gap: 24px; }
@@ -1182,6 +1210,72 @@
           <a href="team/nurse-gaba/" class="nurse-link">Meet Nurse Gaba</a>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ REVIEWS ============ -->
+<section class="reviews" id="reviews">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">In their words</p>
+      <h2>What clients say about being <em>looked after</em></h2>
+      <p>
+        Real Google reviews from real clients, shared as written. We have kept them to the part that
+        matters most to us: how people are treated here.
+      </p>
+    </div>
+    <figure class="rv-feature">
+      <span class="rv-mark" aria-hidden="true">&ldquo;</span>
+      <blockquote>
+        <p>Bonnie Lass is an excellent beauty clinic in Melton. I recently had the pleasure of meeting Tracy, an RN who attended my mother to provide an IV drip. Tracy was incredibly compassionate and caring. What touched me most was that she remembered my earlier call asking for help and took the time to come and assist my mother. When I thanked her for coming, she simply said that she is a nurse and that she has a heart. Those words genuinely touched me.</p>
+        <p>During a very difficult and emotional time for my family, Tracy showed kindness, compassion and humanity when we needed it most. Her professionalism was matched by genuine care for another person. I sincerely wish there were more nurses like Tracy. Thank you, Tracy, for caring enough to help my mother when we needed it. I will always remember your kindness.</p>
+      </blockquote>
+      <figcaption class="rv-who">A client&rsquo;s family<small>Google review, a month ago</small></figcaption>
+    </figure>
+    <div class="rv-grid">
+      <figure class="rv-card">
+        <span class="rv-mark" aria-hidden="true">&ldquo;</span>
+        <blockquote><p>I had a wonderful experience at Bonnie Lass Beauty this morning. Tracey was friendly, professional, knowledgeable and informative, providing a warm and personalised service that made me feel comfortable and well cared for throughout my treatment. She was very gentle and thorough, taking the time to ensure everything was done with care and attention to detail. The salon was clean, comfortable and welcoming. I really appreciated the personal touch, treatment plan and the high level of service. I would happily recommend Bonnie Lass Beauty to anyone looking for a professional, relaxing and personalised beauty experience. Thank you, Tracey!</p></blockquote>
+        <figcaption class="rv-who">Lidia<small>Google review, 4 weeks ago</small></figcaption>
+      </figure>
+      <figure class="rv-card">
+        <span class="rv-mark" aria-hidden="true">&ldquo;</span>
+        <blockquote><p>I can&#x27;t recommend Bonnie Lass in Melton enough. Tracy is honest, knowledgeable, and genuinely cares about what&#x27;s best for your skin. She makes you feel comfortable every step of the way, never pushy, always professional.</p></blockquote>
+        <figcaption class="rv-who">Katie James<small>Google review, a month ago</small></figcaption>
+      </figure>
+      <figure class="rv-card">
+        <span class="rv-mark" aria-hidden="true">&ldquo;</span>
+        <blockquote><p>I had the pleasure of having my first consultation with Nurse Gaba and couldn&#x27;t have asked for a better experience! She was so knowledgeable, took the time to explain everything thoroughly, and worked with me to find the right treatments for my needs. It felt so personal and I felt completely comfortable throughout. All the staff, from reception to the nurses, were so lovely and welcoming. Big shoutout to Nurse Gaba, thank you for such a great experience!</p></blockquote>
+        <figcaption class="rv-who">Milka Fantahun<small>Google review, 2 months ago</small></figcaption>
+      </figure>
+      <figure class="rv-card">
+        <span class="rv-mark" aria-hidden="true">&ldquo;</span>
+        <blockquote><p>This is my second time to the clinic and I&#x27;ve been really happy both times. Seen Tracey and Gaba and the ladies are both very thorough and explain everything to a T. Not pushy, very honest which I think is important in these treatments and services. Definitely will recommend :)</p></blockquote>
+        <figcaption class="rv-who">Bianca Dean<small>Google review, 4 months ago</small></figcaption>
+      </figure>
+      <figure class="rv-card">
+        <span class="rv-mark" aria-hidden="true">&ldquo;</span>
+        <blockquote><p>Absolutely love Bonnie Lass Beauty. I have been going for a few years now and each time it feels like 5 star treatment. They keep their prices as low as they can and treat my very sensitive skin with extra care. Wouldn&#x27;t go anywhere else.</p></blockquote>
+        <figcaption class="rv-who">Tanya Baker<small>Google review, 2 weeks ago</small></figcaption>
+      </figure>
+      <figure class="rv-card">
+        <span class="rv-mark" aria-hidden="true">&ldquo;</span>
+        <blockquote><p>Very friendly staff, and Tracey is exceptional at what she does. Her experience and professionalism make you feel comfortable and at ease throughout the entire process, and she consistently delivers excellent results. Highly recommend.</p></blockquote>
+        <figcaption class="rv-who">Julie Kelly<small>Google review, 3 months ago</small></figcaption>
+      </figure>
+      <figure class="rv-card">
+        <span class="rv-mark" aria-hidden="true">&ldquo;</span>
+        <blockquote><p>“Absolutely Amazing” and “Extremely Professional Service”. I am definitely becoming a regular. Tracy knew exactly what she was doing and explaining every aspect of the treatment. Definitely recommend to anyone looking for real results.</p></blockquote>
+        <figcaption class="rv-who">Marissa Michelle<small>Google review, 3 weeks ago</small></figcaption>
+      </figure>
+    </div>
+    <div class="rv-foot">
+      <p class="rv-note">
+        Reviews are shared as written by clients on Google. Individual experiences vary and results
+        are not guaranteed. Any procedure carries risks, which are discussed with you at consultation.
+      </p>
+      <a href="https://www.google.com/maps/search/Bonnie+Lass+Beauty+Melton" class="btn btn-line" target="_blank" rel="noopener">Read more on Google</a>
     </div>
   </div>
 </section>
