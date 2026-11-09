@@ -120,7 +120,7 @@
   .nav-links { display: flex; align-items: center; gap: 34px; }
   .nav-links a {
     font-size: 12px; font-weight: 400; letter-spacing: 0.13em; text-transform: uppercase;
-    color: rgba(255,255,255,0.88); text-decoration: none; transition: color .35s ease;
+    color: rgba(255,255,255,0.88); text-decoration: none; transition: color .35s ease; white-space: nowrap;
   }
   .nav-links a:hover { color: var(--gold-pale); }
   header.scrolled .nav-links a { color: var(--ink-soft); }
@@ -134,6 +134,8 @@
   .nav-cta:hover { background: #fff; color: var(--ink); }
   header.scrolled .nav-cta { border-color: var(--ink); color: var(--ink); }
   header.scrolled .nav-cta:hover { background: var(--ink); color: var(--ivory); }
+  .nav-cta-gift { margin-right: 10px; }
+  .nav-mobile-only { display: none; }
 
   .burger { display: none; background: none; border: 0; cursor: pointer; padding: 8px; }
   .burger span { display: block; width: 24px; height: 1px; background: #fff; margin: 6px 0; transition: background .4s; }
@@ -709,6 +711,10 @@
   }
 
   /* ---------- MOBILE ---------- */
+  @media (max-width: 1180px) {
+    .nav-links { gap: 24px; }
+    .nav-cta-gift { display: none; }
+  }
   @media (max-width: 900px) {
     .assess-grid, .tracey-grid, .visit-grid, .tease-grid, .wellness-grid { grid-template-columns: 1fr; }
     .wellness-media { max-width: 440px; }
@@ -727,6 +733,7 @@
       box-shadow: 0 20px 40px -20px rgba(0,0,0,0.25);
     }
     .nav-links.open a { color: var(--ink-soft); padding: 12px 0; width: 100%; border-bottom: 1px solid var(--line); }
+    .nav-links.open .nav-mobile-only { display: block; }
     .hero { min-height: 0; display: block; }
     .hero-media { position: relative; aspect-ratio: 1900 / 1150; }
     .hero-media img { object-position: center; }
@@ -749,7 +756,7 @@
   }
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Do I have to know what I want before I come in?", "acceptedAnswer": {"@type": "Answer", "text": "No, and most people do not. That is the entire point of the consultation. You come in, describe what you are seeing, and Tracey works out what is actually causing it. Plenty of people arrive able to say only that something has changed."}}, {"@type": "Question", "name": "What actually happens at the first appointment?", "acceptedAnswer": {"@type": "Answer", "text": "A full facial assessment. Tracey looks at structure, laxity, texture, pigment and what has changed, then talks you through what she has found and what would help, in order of what would make the biggest difference. Every treatment at Bonnie Lass includes a free consultation, an individualised treatment plan, and a complimentary follow-up appointment to review your results."}}, {"@type": "Question", "name": "Will I be pressured into booking something?", "acceptedAnswer": {"@type": "Answer", "text": "No. Tracey will tell you when the answer is skincare and sun protection, or nothing at all right now. Her position is that she would rather you trusted her than booked with her, and a consultation with no treatment is a legitimate outcome, not a failed sale."}}, {"@type": "Question", "name": "What if I am too embarrassed to say what is bothering me?", "acceptedAnswer": {"@type": "Answer", "text": "Say it anyway. Tracey spent thirty years in nursing, midwifery and critical care before she came to aesthetics. There is genuinely nothing you can raise that will faze her, and the thing people are most embarrassed about is usually the thing most easily treated."}}, {"@type": "Question", "name": "Is the free skin assessment the same as a consultation?", "acceptedAnswer": {"@type": "Answer", "text": "No. The assessment on this website is a short questionnaire that gives you a starting read on what is likely driving the change in your skin. The consultation is in person, with Tracey, looking at your actual face. The assessment is a useful first step, not a substitute."}}, {"@type": "Question", "name": "Does it hurt?", "acceptedAnswer": {"@type": "Answer", "text": "It varies by treatment, and Tracey will tell you honestly what to expect before you commit. Microneedling is uncomfortable rather than painful. PRX-Plus uses no needles at all. Discomfort is managed, and nobody is expected to grit their teeth through anything."}}, {"@type": "Question", "name": "How much downtime will I need?", "acceptedAnswer": {"@type": "Answer", "text": "It depends on what you have. PRX-Plus is specifically a no-downtime treatment - there is no needling and no peeling, so you can have it and go back to work. Microneedling will leave you pink for a day or two. Injectable treatments may cause slight redness, swelling or tenderness in the treated area, which is expected and usually resolves within a few days."}}, {"@type": "Question", "name": "How many sessions will I actually need?", "acceptedAnswer": {"@type": "Answer", "text": "More than one, for most things, and Tracey will give you the real number up front rather than after you have paid. Microneedling is at least three sessions two weeks apart. PRX-Plus is a course of three to five, two weeks apart. BYRYZN is three sessions four weeks apart. Bio-remodelling starts with two, four to six weeks apart. A single session of most of these is a taste, not a change."}}, {"@type": "Question", "name": "Will I look like I have had something done?", "acceptedAnswer": {"@type": "Answer", "text": "That is the outcome we are actively trying to avoid. Tracey's stated bias is towards restraint and natural results, and most of the treatments relevant to skin quality change how your skin behaves rather than change your face. The aim is that people say you look well or rested, not that they can identify what you had."}}, {"@type": "Question", "name": "How long do results last?", "acceptedAnswer": {"@type": "Answer", "text": "It depends entirely on the treatment. Some collagen-stimulating treatments build over weeks and hold for many months. Lifting threads lift from day one, with continued tightening over six to twelve weeks and results lasting twelve to eighteen months. Muscle-relaxing treatments typically last three to four months. Tracey will give you a realistic range rather than a best case."}}, {"@type": "Question", "name": "Can I have treatments in summer?", "acceptedAnswer": {"@type": "Answer", "text": "Some, yes - which is unusual. PRX-Plus and BYRYZN are safe for all skin types and all seasons. Other resurfacing treatments are better saved for winter, and Tracey will tell you which is which rather than take your money in January."}}, {"@type": "Question", "name": "Why do some treatments have a price and others do not?", "acceptedAnswer": {"@type": "Answer", "text": "Because some are purchased and some are prescribed. Skin treatments like PRX-Plus, BYRYZN, Rejuran and microneedling have a fixed price, and it is published on this site. Injectable treatments depend on your face, the area and the amount required - quoting a number before Tracey has assessed you would be a guess, so we do not."}}, {"@type": "Question", "name": "Will I get a price before anything happens?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. You will know exactly what a treatment costs before you agree to it. Nobody is billed for a surprise."}}, {"@type": "Question", "name": "Are packages cheaper?", "acceptedAnswer": {"@type": "Answer", "text": "Where a treatment genuinely needs a course, yes. The microneedling course of four with NCTF is $1,170, which saves $130. The exosome course of four is $1,350, saving $150. The packages exist because the course is what produces the result, not as a sales tactic."}}, {"@type": "Question", "name": "Do you offer gift vouchers?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, and you can buy one two ways. Online, which gives you a printable PDF you can hand over straight away, or in the clinic as a paper gift card. Both carry a gift code and an expiry date, and both can be redeemed with us against treatments or products."}}, {"@type": "Question", "name": "What is the cheapest way to start?", "acceptedAnswer": {"@type": "Answer", "text": "The free skin assessment, then the consultation. Both cost nothing, and Tracey will frequently tell you that the highest-value thing you can do is skincare and sun protection - which is the cheapest intervention there is."}}, {"@type": "Question", "name": "Who performs the treatments?", "acceptedAnswer": {"@type": "Answer", "text": "Most treatments are performed by Nurse Tracey. She holds Bachelor's degrees in both Nursing and Midwifery, a Post Graduate qualification in Critical Care and a Masters as a Nurse Practitioner, with over thirty years of experience in the medical field. Nurse Gaba also treats clients here part time. She holds a Bachelor of Nursing and a Post Graduate qualification in Neonatal Intensive Care, and trained in cosmetic nursing after that. You are welcome to ask for whichever injector you would prefer when you book. Some procedures also require a pre-treatment video call with a cosmetic doctor, and Tracey will arrange that."}}, {"@type": "Question", "name": "Is everyone suitable for treatment?", "acceptedAnswer": {"@type": "Answer", "text": "No, and that matters. A consultation with a nurse practitioner is required before any procedure specifically to assess whether you are a suitable candidate. Some people are not, and they will be told so."}}, {"@type": "Question", "name": "What should I do after a treatment?", "acceptedAnswer": {"@type": "Answer", "text": "You will be given specific instructions for what you have had. After volume restoring treatments, the general advice is to keep the area clean, avoid heavy oil-based creams and makeup while healing, avoid heat and direct UV, avoid exercise for 24 to 48 hours, avoid alcohol for the first 24 hours, avoid AHAs, BHAs, retinol and vitamin C for 24 hours, avoid laser, microdermabrasion and chemical peels for two weeks, sleep on your back for the first few nights, and take paracetamol rather than ibuprofen or aspirin if you need pain relief. No flights for 72 hours."}}, {"@type": "Question", "name": "Is lumpiness normal afterwards?", "acceptedAnswer": {"@type": "Answer", "text": "After volume restoring treatments, lumpiness and unevenness in the first two weeks is normal - the product takes time to integrate with your own tissue and lumps soften over time. Book a follow-up appointment for two weeks after the procedure to check everything is settling as it should. If anything worries you before then, call the clinic."}}, {"@type": "Question", "name": "What if something does not look right?", "acceptedAnswer": {"@type": "Answer", "text": "Call the clinic on 0434 710 010. Do not sit at home worrying about it. If you experience any unusual symptoms, seek medical assistance."}}, {"@type": "Question", "name": "Do I get a follow-up?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. A complimentary follow-up appointment to review your results is included with every treatment."}}, {"@type": "Question", "name": "Why can I not see before and after photos on your website?", "acceptedAnswer": {"@type": "Answer", "text": "Because Australian law does not permit clinics to advertise before and after images of prescription-only treatments to the public. That is an AHPRA and TGA advertising requirement, and any clinic showing you injectable before-and-afters on a public page is breaking it. We are not going to break it to win your click."}}, {"@type": "Question", "name": "So can I see results at all?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. After your consultation, Tracey will give you an access code for the private client gallery, where you can see real results from real clients with the context to understand what you are looking at. She can also walk you through relevant results in person at your appointment."}}, {"@type": "Question", "name": "Are the results in the gallery real?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Every image is a Bonnie Lass client treated by Tracey, published with their written consent, shot at the same angle and in the same lighting. Individual results vary, and yours will depend on your face, your skin and your history."}}, {"@type": "Question", "name": "Can you guarantee I will get the same result?", "acceptedAnswer": {"@type": "Answer", "text": "No, and nobody honestly can. Individual results vary and are not guaranteed. Any procedure carries risks, and those will be discussed with you before you consent to anything."}}, {"@type": "Question", "name": "Where are you?", "acceptedAnswer": {"@type": "Answer", "text": "44 Smith Street, Melton VIC 3337, in Melbourne's outer west."}}, {"@type": "Question", "name": "What are your hours?", "acceptedAnswer": {"@type": "Answer", "text": "Open seven days, 9am to 7pm, by appointment only."}}, {"@type": "Question", "name": "How do I book?", "acceptedAnswer": {"@type": "Answer", "text": "Book online through our booking system any time, or call 0434 710 010. The free 15 minute consultation can be booked the same way."}}, {"@type": "Question", "name": "Do you see men?", "acceptedAnswer": {"@type": "Answer", "text": "Yes."}}]}</script>
-<style>/* brand logo */.brandmark{display:inline-flex;align-items:center}.brandmark img.brandlogo{height:48px;width:auto;display:block}.brandmark img.brandlogo-dark{display:none}header.scrolled .brandmark img.brandlogo-light,header.solid .brandmark img.brandlogo-light{display:none}header.scrolled .brandmark img.brandlogo-dark,header.solid .brandmark img.brandlogo-dark{display:block}.foot-brand img.brandlogo-foot{height:46px;width:auto;display:block;margin-bottom:12px}</style>
+<style>/* brand logo */.brandmark{display:inline-flex;align-items:center}.brandmark img.brandlogo{height:72px;width:auto;display:block}.brandmark img.brandlogo-dark{display:none}header.scrolled .brandmark img.brandlogo-light,header.solid .brandmark img.brandlogo-light{display:none}header.scrolled .brandmark img.brandlogo-dark,header.solid .brandmark img.brandlogo-dark{display:block}.foot-brand img.brandlogo-foot{height:46px;width:auto;display:block;margin-bottom:12px}</style>
 <!-- SEO:START (managed by build/inject-seo.py - edit data.py, not this block) -->
 <link rel="canonical" href="https://www.bonnielassbeauty.com.au/">
 <meta property="og:url" content="https://www.bonnielassbeauty.com.au/">
@@ -771,7 +778,7 @@
 <!-- ============ NAV ============ -->
 <header id="hdr">
   <div class="wrap nav">
-    <a href="#top" class="brandmark" aria-label="Bonnie Lass Beauty"><img class="brandlogo brandlogo-light" src="assets/logo-white.png" alt="Bonnie Lass Beauty"><img class="brandlogo brandlogo-dark" src="assets/logo-black.png" alt=""></a>
+    <a href="#top" class="brandmark" aria-label="Bonnie Lass Beauty"><img class="brandlogo brandlogo-light" src="assets/logo-gold-white.png" alt="Bonnie Lass Beauty"><img class="brandlogo brandlogo-dark" src="assets/logo-gold-black.png" alt=""></a>
     <nav class="nav-links" id="navlinks">
       <a href="#concerns">Your Skin</a>
       <a href="#assessment">Free Assessment</a>
@@ -779,7 +786,9 @@
       <a href="#tracey">Nurse Tracey</a>
       <a href="#faq">Q&amp;A</a>
       <a href="#visit">Visit</a>
+      <a href="https://bookings.gettimely.com/bonnielassbeauty/bb/purchase?giftVoucherId=213383" class="nav-mobile-only" target="_blank" rel="noopener">Gift Vouchers</a>
     </nav>
+    <a href="https://bookings.gettimely.com/bonnielassbeauty/bb/purchase?giftVoucherId=213383" class="nav-cta nav-cta-gift" target="_blank" rel="noopener">Gift Vouchers</a>
     <a href="https://bookings.gettimely.com/bonnielassbeauty/book" class="nav-cta" target="_blank" rel="noopener">Book Now</a>
     <button class="burger" id="burger" aria-label="Menu" aria-expanded="false">
       <span></span><span></span>
@@ -1212,7 +1221,7 @@
 
 
 <!-- ============ GIFT VOUCHERS ============ -->
-<!-- The Timely gift voucher URL goes in BOTH hrefs below (search: GIFT_VOUCHER_URL). -->
+<!-- Timely gift voucher link: build/data.py BIZ["voucher"] -->
 <style>
   .vouchers { padding: 96px 0; background: var(--ink); color: var(--ivory); }
   .vouchers .section-head h2 { color: var(--ivory); }
@@ -1241,7 +1250,7 @@
       <div class="v-card">
         <h3>Online</h3>
         <p>
-          Buy any time and print it out at home. Your voucher arrives as a printable PDF with its own
+          <a href="https://bookings.gettimely.com/bonnielassbeauty/bb/purchase?giftVoucherId=213383" target="_blank" rel="noopener">Buy any time online</a> and print it out at home. Your voucher arrives as a printable PDF with its own
           gift code and expiry date, ready to hand over.
         </p>
       </div>
@@ -1258,9 +1267,7 @@
       with you and we will take care of the rest.
     </p>
     <div class="v-cta">
-      <!-- GIFT_VOUCHER_URL: swap this href for the clinic's Timely gift voucher link, then change
-           the button text back to "Buy a gift voucher" and add target="_blank" rel="noopener". -->
-      <a href="tel:+61434710010" class="btn btn-gold">Call us to buy a voucher</a>
+      <a href="https://bookings.gettimely.com/bonnielassbeauty/bb/purchase?giftVoucherId=213383" class="btn btn-gold" target="_blank" rel="noopener">Buy a gift voucher online</a>
     </div>
   </div>
 </section>
@@ -1473,8 +1480,7 @@
         </ul>
         <div class="rule"></div>
         <a href="https://bookings.gettimely.com/bonnielassbeauty/book" class="btn btn-solid" target="_blank" rel="noopener">Book an appointment</a>
-        <!-- GIFT_VOUCHER_URL -->
-        <a href="#vouchers" class="btn btn-line">Buy a gift voucher</a>
+        <a href="https://bookings.gettimely.com/bonnielassbeauty/bb/purchase?giftVoucherId=213383" class="btn btn-line" target="_blank" rel="noopener">Buy a gift voucher</a>
       </div>
       <div>
         <iframe

@@ -96,11 +96,13 @@ header.solid, header.scrolled {
   text-decoration: none; transition: all .4s ease; white-space: nowrap;
 }
 .nav-cta:hover { background: var(--ink); color: var(--ivory); }
+.nav-cta-gift { margin-right: 10px; }
+.nav-mobile-only { display: none; }
 
 .burger { display: none; background: none; border: 0; cursor: pointer; padding: 8px; }
 .burger span { display: block; width: 24px; height: 1px; background: var(--ink); margin: 6px 0; }
 
-body.sub { padding-top: 74px; }
+body.sub { padding-top: 100px; }
 
 /* ---------- BREADCRUMBS ---------- */
 .crumbs {
@@ -352,7 +354,11 @@ footer { background: var(--ink); color: rgba(255,253,250,0.5); padding: 70px 0 3
   .tre-hero-media { max-width: 520px; }
   .tre-hero-media::after { display: none; }
 }
-@media (max-width: 860px) {
+@media (max-width: 1180px) {
+  .nav-links { gap: 22px; }
+  .nav-cta-gift { display: none; }
+}
+@media (max-width: 900px) {
   .nav-links { display: none; }
   .burger { display: block; }
   .nav-cta { display: none; }
@@ -363,6 +369,7 @@ footer { background: var(--ink); color: rgba(255,253,250,0.5); padding: 70px 0 3
     box-shadow: 0 20px 40px -20px rgba(0,0,0,0.2);
   }
   .nav-links.open a { padding: 13px 0; width: 100%; border-bottom: 1px solid var(--line); }
+  .nav-links.open .nav-mobile-only { display: block; }
   .menu-row { grid-template-columns: 1fr; gap: 10px; }
   .menu-row-price { text-align: left; }
   .tre-facts { gap: 26px; }
