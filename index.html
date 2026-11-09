@@ -467,6 +467,27 @@
   .tease-actions { display: flex; flex-wrap: wrap; gap: 12px; }
   .tease-img img { width: 100%; aspect-ratio: 4/5; object-fit: cover; }
 
+  /* ---------- IV & WELLNESS ---------- */
+  .wellness { background: var(--white); border-top: 1px solid var(--line); }
+  .wellness-grid {
+    display: grid; grid-template-columns: 0.95fr 1.05fr;
+    gap: clamp(40px, 6vw, 84px); align-items: center;
+  }
+  .wellness-media { position: relative; }
+  .wellness-media img { width: 100%; display: block; object-fit: cover; object-position: center top; aspect-ratio: 4/5; background: var(--blush); }
+  .wellness-media::after {
+    content: ""; position: absolute; inset: 22px -22px -22px 22px;
+    border: 1px solid var(--gold); z-index: -1; pointer-events: none;
+  }
+  .wellness-grid { position: relative; z-index: 0; }
+  .wellness h2 { font-size: clamp(32px, 4.4vw, 50px); margin-bottom: 20px; }
+  .wellness-also {
+    margin-top: 30px; padding-top: 22px; border-top: 1px solid var(--line);
+    font-size: 15px; color: var(--muted); line-height: 1.6;
+  }
+  .wellness-also a { color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--gold); padding-bottom: 2px; transition: color .35s ease; }
+  .wellness-also a:hover { color: var(--gold-deep); }
+
   /* ---------- TRACEY ---------- */
   .tracey { background: var(--ivory-warm); }
   .tracey-grid {
@@ -689,7 +710,9 @@
 
   /* ---------- MOBILE ---------- */
   @media (max-width: 900px) {
-    .assess-grid, .tracey-grid, .visit-grid, .tease-grid { grid-template-columns: 1fr; }
+    .assess-grid, .tracey-grid, .visit-grid, .tease-grid, .wellness-grid { grid-template-columns: 1fr; }
+    .wellness-media { max-width: 440px; }
+    .wellness-media::after { display: none; }
     .tracey-portrait { max-width: 400px; }
     .tracey-portrait::after { display: none; }
   }
@@ -1027,6 +1050,37 @@
 </section>
 
 <!-- ============ TRACEY ============ -->
+<!-- ============ IV & WELLNESS ============ -->
+<section class="wellness" id="wellness">
+  <div class="wrap wellness-grid">
+    <figure class="wellness-media">
+      <img src="assets/iv-drip.jpg" alt="Nurse adjusting an IV vitamin drip beside the treatment chair at Bonnie Lass Beauty, Melton" loading="lazy">
+    </figure>
+    <div>
+      <p class="eyebrow">New &middot; IV &amp; Wellness</p>
+      <h2>Looking after you from the <em>inside</em>, too</h2>
+      <p class="tease-lede">
+        Nurse-led IV vitamin drips, fifteen-minute vitamin shots and in-clinic micronutrient blood
+        testing. Every formulation is tailored to you after a consultation, and delivered with the
+        same careful clinical oversight as everything else we do.
+      </p>
+      <ul class="tease-list">
+        <li><span>IV vitamin drips</span><strong>Tailored to you</strong></li>
+        <li><span>Intramuscular &amp; subcutaneous shots</span><strong>15 minutes</strong></li>
+        <li><span>Micronutrient blood testing</span><strong>In clinic</strong></li>
+      </ul>
+      <div class="tease-actions">
+        <a href="treatments/iv-and-wellness/" class="btn btn-solid">Read about IV &amp; Wellness</a>
+        <a href="https://bookings.gettimely.com/bonnielassbeauty/book" class="btn btn-line" target="_blank" rel="noopener">Book a consultation</a>
+      </div>
+      <p class="wellness-also">
+        Also new in clinic: <a href="treatments/cosmelan/">Cosmelan pigmentation treatment</a>, a
+        two-phase professional treatment for stubborn pigmentation, melasma and sun damage.
+      </p>
+    </div>
+  </div>
+</section>
+
 <section class="tracey" id="tracey">
   <div class="wrap">
     <div class="tracey-grid">
