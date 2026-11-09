@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /gallery/
+Disallow: /thank-you/
+
+Sitemap: https://www.bonnielassbeauty.com.au/sitemap.xml
