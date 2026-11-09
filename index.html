@@ -492,15 +492,15 @@
 
   /* ---------- TRACEY ---------- */
   .tracey { background: var(--ivory-warm); }
-  .tracey-media {
-    position: relative; display: grid; grid-template-columns: 1.25fr 1fr 1fr; grid-template-rows: 1fr 1fr;
-    gap: 14px; height: clamp(420px, 44vw, 600px); margin-bottom: clamp(44px, 5vw, 70px);
-  }
-  .tracey-media img { width: 100%; height: 100%; object-fit: cover; display: block; background: var(--blush); }
-  .tracey-media .tm-main { grid-row: 1 / span 2; object-position: center top; }
-  .tracey-media::after { content: ''; position: absolute; inset: -14px; border: 1px solid var(--gold); z-index: -1; }
-  .tracey-text { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: clamp(36px, 5vw, 80px); align-items: start; }
-  .tracey-text .creds { margin-top: 0; }
+  .tracey-grid { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: clamp(40px, 5vw, 80px); align-items: start; }
+  .tracey-fade { position: sticky; top: 120px; }
+  .tracey-fade .frame { position: relative; aspect-ratio: 4/5; overflow: hidden; background: var(--blush); }
+  .tracey-fade .frame img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center top; opacity: 0; transition: opacity 1.4s ease; }
+  .tracey-fade .frame img.is-on { opacity: 1; }
+  .tracey-fade::after { content: ''; position: absolute; inset: -14px; border: 1px solid var(--gold); z-index: -1; }
+  .fade-dots { display: flex; gap: 8px; justify-content: center; margin-top: 22px; }
+  .fade-dots button { width: 7px; height: 7px; border-radius: 50%; border: 0; background: var(--line); padding: 0; cursor: pointer; transition: background .4s; }
+  .fade-dots button.is-on { background: var(--gold); }
   .nurse-row { margin-top: clamp(70px, 8vw, 110px); padding-top: clamp(50px, 6vw, 80px); border-top: 1px solid var(--line); }
   .nurse-grid { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: clamp(40px, 5vw, 80px); align-items: center; }
   .nurse-portrait { position: relative; }
@@ -752,12 +752,9 @@
     .assess-grid, .visit-grid, .tease-grid, .wellness-grid { grid-template-columns: 1fr; }
     .wellness-media { max-width: 440px; }
     .wellness-media::after { display: none; }
-    .tracey-media { grid-template-columns: 1fr 1fr; grid-template-rows: auto; height: auto; }
-    .tracey-media img { aspect-ratio: 4/3; height: auto; }
-    .tracey-media .tm-main { grid-column: 1 / span 2; grid-row: auto; aspect-ratio: 16/10; }
-    .tracey-media .tm-d { display: none; }
-    .tracey-media::after, .nurse-portrait::after { display: none; }
-    .tracey-text, .nurse-grid { grid-template-columns: 1fr; }
+    .tracey-grid, .nurse-grid { grid-template-columns: 1fr; }
+    .tracey-fade { position: static; max-width: 440px; }
+    .tracey-fade::after, .nurse-portrait::after { display: none; }
     .nurse-portrait { max-width: 440px; }
   }
   @media (max-width: 900px) {
@@ -1131,49 +1128,49 @@
 <section class="tracey" id="nurses">
   <span id="tracey"></span>
   <div class="wrap">
-    <div class="tracey-media">
-      <img class="tm-main" src="assets/tracey.jpg" alt="Nurse Practitioner Tracey Croft, Bonnie Lass Beauty" loading="lazy">
-      <img class="tm-a" src="assets/consult-chart.jpg" alt="Tracey talking a client through a facial chart at Bonnie Lass Beauty, Melton" loading="lazy">
-      <img class="tm-b" src="assets/tracey-2.jpg" alt="Nurse Practitioner Tracey Croft in the clinic at Bonnie Lass Beauty, Melton" loading="lazy">
-      <img class="tm-c" src="assets/car-3.jpg" alt="Tracey preparing a treatment at Bonnie Lass Beauty, Melton" loading="lazy">
-      <img class="tm-d" src="assets/car-8.jpg" alt="Tracey assessing a client's face at Bonnie Lass Beauty, Melton" loading="lazy">
-    </div>
-    <div class="tracey-text">
+    <div class="tracey-grid">
+      <div class="tracey-fade">
+        <div class="frame" id="traceyFade">
+          <img class="is-on" src="assets/tracey.jpg" alt="Nurse Practitioner Tracey Croft, Bonnie Lass Beauty" loading="lazy">
+          <img src="assets/consult-chart.jpg" alt="Tracey talking a client through a facial chart at Bonnie Lass Beauty, Melton" loading="lazy">
+          <img src="assets/car-3.jpg" alt="Tracey preparing a treatment at Bonnie Lass Beauty, Melton" loading="lazy">
+          <img src="assets/tracey-2.jpg" alt="Nurse Practitioner Tracey Croft in the clinic at Bonnie Lass Beauty, Melton" loading="lazy">
+        </div>
+        <div class="fade-dots" id="traceyDots" aria-hidden="true"></div>
+      </div>
       <div>
         <p class="eyebrow">Our Founder and Nurse Practitioner</p>
         <h2>Nurse Tracey</h2>
         <p class="role">Nurse Practitioner &middot; Melton, Victoria</p>
-          <p>
-            Thirty years in medicine before she ever picked up a cosmetic needle. Nursing, midwifery,
-            critical care, many years in emergency retrieval and transport with PIPER, Victoria's
-            paediatric, infant and perinatal emergency retrieval service, and a Masters as a Nurse
-            Practitioner. That is a career spent looking after people at the most critical moments of
-            their lives, and it is why the conversation here sounds different from the one you get in a
-            shopping centre.
-          </p>
-          <p>
-            Tracey has a special interest in full facial assessments, volume restoration, fine-line and
-            wrinkle prevention, and skin enrichment therapies. Her bias is towards restraint and towards
-            natural results - she would rather you left looking like yourself on your best day than like
-            somebody else entirely.
-          </p>
-          <p>
-            She will also tell you when the answer is no. That is the part clients remember.
-          </p>
-      </div>
-      <div>
-          <p>
-            Her special interest is holistic care: looking at the whole person, not one line on one
-            face. Hormones, sleep, stress, nutrition and what is going on in your life all show up in
-            your skin, so she treats them as part of the picture rather than something to work around.
-            It is why wellness and IV therapy sit alongside skin treatments here, and why your plan
-            starts with how you are, not with what is on the menu.
-          </p>
-          <p>
-            Women's health is where that passion runs deepest. Menopause management, and the skin,
-            energy and confidence changes that come with it, is the work she cares about most, and she
-            is building a voice as an advocate for women at this stage of life.
-          </p>
+        <p>
+          Thirty years in medicine before she ever picked up a cosmetic needle. Nursing, midwifery,
+          critical care, many years in emergency retrieval and transport with PIPER, Victoria's
+          paediatric, infant and perinatal emergency retrieval service, and a Masters as a Nurse
+          Practitioner. That is a career spent looking after people at the most critical moments of
+          their lives, and it is why the conversation here sounds different from the one you get in a
+          shopping centre.
+        </p>
+        <p>
+          Tracey has a special interest in full facial assessments, volume restoration, fine-line and
+          wrinkle prevention, and skin enrichment therapies. Her bias is towards restraint and towards
+          natural results - she would rather you left looking like yourself on your best day than like
+          somebody else entirely.
+        </p>
+        <p>
+          Her special interest is holistic care: looking at the whole person, not one line on one
+          face. Hormones, sleep, stress, nutrition and what is going on in your life all show up in
+          your skin, so she treats them as part of the picture rather than something to work around.
+          It is why wellness and IV therapy sit alongside skin treatments here, and why your plan
+          starts with how you are, not with what is on the menu.
+        </p>
+        <p>
+          Women's health is where that passion runs deepest. Menopause management, and the skin,
+          energy and confidence changes that come with it, is the work she cares about most, and she
+          is building a voice as an advocate for women at this stage of life.
+        </p>
+        <p>
+          She will also tell you when the answer is no. That is the part clients remember.
+        </p>
         <ul class="creds">
           <li>Bachelor of Nursing and Bachelor of Midwifery</li>
           <li>Post Graduate qualification in Critical Care</li>
@@ -1912,5 +1909,15 @@
   }
 </script>
 
+<script>
+(function(){
+  var f=document.getElementById('traceyFade'), d=document.getElementById('traceyDots'); if(!f||!d) return;
+  var imgs=f.querySelectorAll('img'), i=0, t;
+  imgs.forEach(function(_,k){ var b=document.createElement('button'); if(k===0)b.className='is-on'; b.addEventListener('click',function(){ go(k); restart(); }); d.appendChild(b); });
+  function go(k){ imgs[i].classList.remove('is-on'); d.children[i].classList.remove('is-on'); i=k; imgs[i].classList.add('is-on'); d.children[i].classList.add('is-on'); }
+  function restart(){ clearInterval(t); t=setInterval(function(){ go((i+1)%imgs.length); }, 4500); }
+  restart();
+})();
+</script>
 </body>
 </html>
