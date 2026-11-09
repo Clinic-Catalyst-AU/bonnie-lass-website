@@ -8,174 +8,28 @@
 <script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','537615938096506');fbq('track','PageView');</script>
 <!-- TRACKING:END -->
 <title>Client Results | Bonnie Lass Beauty</title>
+<meta name="description" content="Before and after results at Bonnie Lass Beauty, Melton, are shared with clients in person at consultation, in line with Australian safety and advertising requirements.">
 <meta name="robots" content="noindex, nofollow, noarchive, noimageindex">
-
 <meta name="theme-color" content="#1B2540">
+<meta http-equiv="refresh" content="8; url=../#results">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
-  :root {
-    --ink:#1B2540; --ink-deep:#141D34; --muted:#77809A;
-    --gold:#BF9B45; --gold-pale:#D8C060; --gold-deep:#8F6B2E;
-    --ivory:#FAF8F5; --white:#FFFEFC;
-    --display:'Cormorant Garamond',Georgia,serif;
-    --body:'Montserrat',-apple-system,sans-serif;
-    --gutter: clamp(20px,5vw,64px);
-  }
-  body {
-    font-family:var(--body); font-weight:300; font-size:17px; line-height:1.7;
-    background:var(--ink); color:rgba(255,253,250,0.82);
-    min-height:100vh; -webkit-font-smoothing:antialiased;
-  }
-  img { max-width:100%; display:block; }
-  .wrap { max-width:1180px; margin:0 auto; padding-inline:var(--gutter); }
-  h1,h2,h3 { font-family:var(--display); font-weight:400; color:var(--white); line-height:1.14; }
-  em { font-style:italic; color:var(--gold-pale); }
-
-  .btn {
-    display:inline-flex; align-items:center; justify-content:center; gap:10px;
-    font-family:var(--body); font-size:12px; font-weight:500; letter-spacing:0.16em;
-    text-transform:uppercase; text-decoration:none; padding:19px 38px;
-    border:1px solid transparent; cursor:pointer; transition:all .4s ease;
-  }
-  .btn-gold { background:var(--gold); color:#fff; }
-  .btn-gold:hover { background:var(--gold-deep); }
-  .btn-line-light { border-color:rgba(255,255,255,0.45); color:#fff; background:transparent; }
-  .btn-line-light:hover { background:#fff; color:var(--ink); }
-
-  /* top bar */
-  .bar { padding:24px 0; border-bottom:1px solid rgba(255,255,255,0.1); }
-  .bar .wrap { display:flex; align-items:center; justify-content:space-between; gap:20px; }
-  .brandmark { font-family:var(--display); font-size:21px; color:#fff; text-decoration:none; }
-  .bar a.back {
-    font-size:11px; letter-spacing:0.14em; text-transform:uppercase;
-    color:rgba(255,255,255,0.55); text-decoration:none;
-  }
-  .bar a.back:hover { color:var(--gold-pale); }
-
-  /* ---- GATE ---- */
-  .gate {
-    min-height:calc(100vh - 76px);
-    display:flex; align-items:center; justify-content:center;
-    padding:60px var(--gutter);
-    position:relative; overflow:hidden;
-  }
-  .gate::before {
-    content:''; position:absolute; inset:0;
-    background:radial-gradient(ellipse at 50% 30%, rgba(191,155,69,0.13) 0%, transparent 62%);
-    pointer-events:none;
-  }
-  .gate-card {
-    position:relative; z-index:1;
-    max-width:520px; width:100%; text-align:center;
-    background:rgba(255,255,255,0.05);
-    border:1px solid rgba(255,255,255,0.15);
-    padding:clamp(36px,5vw,60px);
-    backdrop-filter:blur(8px);
-  }
-  .lock {
-    width:52px; height:52px; margin:0 auto 26px;
-    border:1px solid var(--gold); border-radius:50%;
-    display:flex; align-items:center; justify-content:center; color:var(--gold-pale);
-  }
-  .gate-card .eyebrow {
-    font-size:11px; letter-spacing:0.2em; text-transform:uppercase;
-    color:var(--gold-pale); margin-bottom:16px;
-  }
-  .gate-card h1 { font-size:clamp(30px,4vw,42px); margin-bottom:16px; }
-  .gate-card > p { font-size:15px; color:rgba(255,255,255,0.62); margin-bottom:30px; }
-
-  .pw-row { display:flex; gap:10px; margin-bottom:14px; }
-  .pw-row input {
-    flex:1; font-family:var(--body); font-size:16px; font-weight:300;
-    color:#fff; background:rgba(255,255,255,0.06);
-    border:1px solid rgba(255,255,255,0.22); padding:16px 18px;
-    text-align:center; letter-spacing:0.14em; transition:border-color .3s;
-  }
-  .pw-row input:focus { outline:0; border-color:var(--gold); }
-  .pw-row input::placeholder { color:rgba(255,255,255,0.28); letter-spacing:0.05em; }
-  .pw-row .btn { padding:16px 26px; }
-
-  .gate-err {
-    font-size:13px; color:#F2A2A2; min-height:20px; margin-bottom:8px;
-  }
-  .gate-note {
-    margin-top:26px; padding-top:22px; border-top:1px solid rgba(255,255,255,0.1);
-    font-size:12px; line-height:1.65; color:rgba(255,255,255,0.4);
-  }
-  .gate-note a { color:var(--gold-pale); }
-
-  /* ---- GALLERY ---- */
-  .gal { display:none; padding:70px 0 90px; }
-  .gal.open { display:block; animation:fade .7s ease; }
-  @keyframes fade { from {opacity:0; transform:translateY(16px);} to {opacity:1; transform:none;} }
-
-  .gal-head { max-width:680px; margin-bottom:52px; }
-  .gal-head .eyebrow {
-    font-size:11px; letter-spacing:0.2em; text-transform:uppercase;
-    color:var(--gold-pale); margin-bottom:18px;
-  }
-  .gal-head h1 { font-size:clamp(34px,4.6vw,52px); margin-bottom:18px; }
-  .gal-head p { color:rgba(255,255,255,0.66); font-size:16px; }
-
-  .ba-grid {
-    display:grid; grid-template-columns:repeat(auto-fill, minmax(320px,1fr));
-    gap:30px; margin-bottom:70px;
-  }
-  .ba {
-    background:rgba(255,255,255,0.04);
-    border:1px solid rgba(255,255,255,0.12);
-    overflow:hidden;
-  }
-  .ba-pair { display:grid; grid-template-columns:1fr 1fr; position:relative; }
-  .ba-pair figure { position:relative; }
-  .ba-pair img { width:100%; aspect-ratio:4/5; object-fit:cover; }
-  .ba-pair figcaption {
-    position:absolute; bottom:0; left:0; right:0;
-    background:linear-gradient(to top, rgba(20,29,52,0.9), transparent);
-    padding:22px 12px 10px;
-    font-size:10px; letter-spacing:0.18em; text-transform:uppercase;
-    color:var(--gold-pale); text-align:center;
-  }
-  .ba-pair::after {
-    content:''; position:absolute; top:0; bottom:0; left:50%;
-    width:1px; background:rgba(255,255,255,0.3);
-  }
-  .ba-body { padding:22px 24px 26px; }
-  .ba-body h3 { font-size:21px; margin-bottom:6px; }
-  .ba-meta {
-    font-size:11px; letter-spacing:0.14em; text-transform:uppercase;
-    color:var(--gold-deep); margin-bottom:10px;
-  }
-  .ba-body p { font-size:14px; color:rgba(255,255,255,0.6); margin:0; }
-
-  .gal-empty {
-    border:1px dashed rgba(255,255,255,0.2); padding:60px 40px;
-    text-align:center; color:rgba(255,255,255,0.5); margin-bottom:60px;
-  }
-  .gal-empty h3 { font-size:24px; margin-bottom:10px; }
-
-  .gal-cta {
-    background:rgba(191,155,69,0.1); border:1px solid rgba(191,155,69,0.3);
-    padding:clamp(36px,5vw,60px); text-align:center;
-  }
-  .gal-cta h2 { font-size:clamp(28px,3.6vw,40px); margin-bottom:14px; }
-  .gal-cta p { max-width:520px; margin:0 auto 30px; color:rgba(255,255,255,0.68); font-size:16px; }
-
-  .compliance {
-    margin-top:50px; padding-top:26px; border-top:1px solid rgba(255,255,255,0.1);
-    font-size:12px; line-height:1.7; color:rgba(255,255,255,0.36);
-  }
-
-  @media (max-width:600px) {
-    .pw-row { flex-direction:column; }
-    .pw-row .btn { width:100%; }
-  }
-  @media (prefers-reduced-motion: reduce) { * { animation:none !important; transition:none !important; } }
+  :root { --ink:#1B2540; --gold:#BF9B45; --gold-pale:#D8C060; --gold-deep:#8F6B2E; --white:#FFFEFC; --display:'Cormorant Garamond',Georgia,serif; --body:'Montserrat',-apple-system,sans-serif; }
+  body { font-family:var(--body); font-weight:300; font-size:17px; line-height:1.7; background:var(--ink); color:rgba(255,253,250,0.82); min-height:100vh; display:flex; flex-direction:column; }
+  .wrap { max-width:720px; margin:auto; padding:80px clamp(20px,5vw,64px); text-align:center; }
+  img.logo { height:84px; margin:0 auto 36px; display:block; }
+  .eyebrow { font-size:11px; font-weight:500; letter-spacing:0.22em; text-transform:uppercase; color:var(--gold-pale); margin-bottom:20px; }
+  h1 { font-family:var(--display); font-weight:400; color:var(--white); font-size:clamp(34px,5vw,54px); line-height:1.1; margin-bottom:22px; }
+  h1 em { font-style:italic; color:var(--gold-pale); }
+  p { margin-bottom:18px; }
+  .btn { display:inline-flex; align-items:center; justify-content:center; gap:10px; font-family:var(--body); font-size:12px; font-weight:500; letter-spacing:0.16em; text-transform:uppercase; text-decoration:none; padding:19px 38px; border:1px solid transparent; margin:14px 6px 0; transition:all .4s ease; }
+  .btn-gold { background:var(--gold); color:#fff; } .btn-gold:hover { background:var(--gold-deep); }
+  .btn-line-light { border-color:rgba(255,255,255,0.45); color:#fff; } .btn-line-light:hover { background:#fff; color:var(--ink); }
+  .note { font-size:12.5px; color:rgba(255,253,250,0.4); margin-top:40px; line-height:1.7; }
 </style>
-<style>/* brand logo */.brandmark{display:inline-flex;align-items:center;flex:0 0 auto}.brandmark img.brandlogo{height:72px;width:72px;display:block}.brandmark img.brandlogo-dark{display:none}header.scrolled .brandmark img.brandlogo-light,header.solid .brandmark img.brandlogo-light{display:none}header.scrolled .brandmark img.brandlogo-dark,header.solid .brandmark img.brandlogo-dark{display:block}.foot-brand img.brandlogo-foot{height:46px;width:auto;display:block;margin-bottom:12px}</style>
 <!-- SEO:START (managed by build/inject-seo.py - edit data.py, not this block) -->
 <link rel="canonical" href="https://www.bonnielassbeauty.com.au/gallery/">
 <meta property="og:url" content="https://www.bonnielassbeauty.com.au/gallery/">
@@ -184,201 +38,23 @@
 <meta property="og:image" content="https://www.bonnielassbeauty.com.au/assets/hero.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Client Results | Bonnie Lass Beauty">
-<meta name="twitter:description" content="">
+<meta name="twitter:description" content="Before and after results at Bonnie Lass Beauty, Melton, are shared with clients in person at consultation, in line with Australian safety and advertising requirements.">
 <meta name="twitter:image" content="https://www.bonnielassbeauty.com.au/assets/hero.jpg">
-<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": ["MedicalBusiness", "LocalBusiness"], "@id": "https://www.bonnielassbeauty.com.au/#clinic", "name": "Bonnie Lass Beauty", "url": "https://www.bonnielassbeauty.com.au/", "description": "Nurse-led skin, wellness and cosmetic medicine clinic in Melton, Victoria, with a special interest in perimenopausal skin and skin laxity after weight loss.", "logo": {"@type": "ImageObject", "url": "https://www.bonnielassbeauty.com.au/assets/logo-gold.png"}, "image": ["https://www.bonnielassbeauty.com.au/assets/hero.jpg", "https://www.bonnielassbeauty.com.au/assets/clinic-1.jpg", "https://www.bonnielassbeauty.com.au/assets/tracey.jpg"], "telephone": "+61434710010", "email": "hello@bonnielassbeauty.com.au", "address": {"@type": "PostalAddress", "streetAddress": "44 Smith Street", "addressLocality": "Melton", "addressRegion": "VIC", "postalCode": "3337", "addressCountry": "AU"}, "hasMap": "https://www.google.com/maps?q=44+Smith+Street,+Melton+VIC+3337", "areaServed": {"@type": "City", "name": "Melton", "containedInPlace": {"@type": "AdministrativeArea", "name": "Victoria"}}, "openingHoursSpecification": [{"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"], "opens": "09:00", "closes": "19:00"}], "priceRange": "$$", "currenciesAccepted": "AUD", "paymentAccepted": "Cash, Credit Card", "founder": {"@id": "https://www.bonnielassbeauty.com.au/#tracey"}, "employee": {"@id": "https://www.bonnielassbeauty.com.au/#tracey"}, "sameAs": ["https://www.instagram.com/bonnielassbeauty/"], "potentialAction": {"@type": "ReserveAction", "name": "Book an appointment", "target": {"@type": "EntryPoint", "urlTemplate": "https://bookings.gettimely.com/bonnielassbeauty/book", "actionPlatform": ["http://schema.org/DesktopWebPlatform", "http://schema.org/MobileWebPlatform"]}}}, {"@type": "Person", "@id": "https://www.bonnielassbeauty.com.au/#tracey", "name": "Tracey Croft", "alternateName": "Nurse Tracey", "jobTitle": "Nurse Practitioner", "description": "Endorsed Nurse Practitioner with more than thirty years in nursing, midwifery and critical care, including many years in emergency retrieval with PIPER, before moving into aesthetics. Owner and lead clinician at Bonnie Lass Beauty, Melton.", "image": "https://www.bonnielassbeauty.com.au/assets/tracey.jpg", "url": "https://www.bonnielassbeauty.com.au/#tracey", "worksFor": {"@id": "https://www.bonnielassbeauty.com.au/#clinic"}, "knowsAbout": ["Holistic care", "Perimenopausal skin", "Skin laxity after weight loss", "Collagen stimulation", "Microneedling", "Skin boosters", "Cosmetic nursing"]}, {"@type": "WebSite", "@id": "https://www.bonnielassbeauty.com.au/#website", "url": "https://www.bonnielassbeauty.com.au/", "name": "Bonnie Lass Beauty", "publisher": {"@id": "https://www.bonnielassbeauty.com.au/#clinic"}, "inLanguage": "en-AU"}, {"@type": "WebPage", "@id": "https://www.bonnielassbeauty.com.au/gallery/#webpage", "url": "https://www.bonnielassbeauty.com.au/gallery/", "name": "Client Results | Bonnie Lass Beauty", "description": "", "isPartOf": {"@id": "https://www.bonnielassbeauty.com.au/#website"}, "about": {"@id": "https://www.bonnielassbeauty.com.au/#clinic"}, "inLanguage": "en-AU", "dateModified": "2026-11-09", "breadcrumb": {"@id": "https://www.bonnielassbeauty.com.au/gallery/#breadcrumb"}}, {"@type": "BreadcrumbList", "@id": "https://www.bonnielassbeauty.com.au/gallery/#breadcrumb", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Bonnie Lass Beauty", "item": "https://www.bonnielassbeauty.com.au/"}, {"@type": "ListItem", "position": 2, "name": "Client Results", "item": "https://www.bonnielassbeauty.com.au/gallery/"}]}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": ["MedicalBusiness", "LocalBusiness"], "@id": "https://www.bonnielassbeauty.com.au/#clinic", "name": "Bonnie Lass Beauty", "url": "https://www.bonnielassbeauty.com.au/", "description": "Nurse-led skin, wellness and cosmetic medicine clinic in Melton, Victoria, with a special interest in perimenopausal skin and skin laxity after weight loss.", "logo": {"@type": "ImageObject", "url": "https://www.bonnielassbeauty.com.au/assets/logo-gold.png"}, "image": ["https://www.bonnielassbeauty.com.au/assets/hero.jpg", "https://www.bonnielassbeauty.com.au/assets/clinic-1.jpg", "https://www.bonnielassbeauty.com.au/assets/tracey.jpg"], "telephone": "+61434710010", "email": "hello@bonnielassbeauty.com.au", "address": {"@type": "PostalAddress", "streetAddress": "44 Smith Street", "addressLocality": "Melton", "addressRegion": "VIC", "postalCode": "3337", "addressCountry": "AU"}, "hasMap": "https://www.google.com/maps?q=44+Smith+Street,+Melton+VIC+3337", "areaServed": {"@type": "City", "name": "Melton", "containedInPlace": {"@type": "AdministrativeArea", "name": "Victoria"}}, "openingHoursSpecification": [{"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"], "opens": "09:00", "closes": "19:00"}], "priceRange": "$$", "currenciesAccepted": "AUD", "paymentAccepted": "Cash, Credit Card", "founder": {"@id": "https://www.bonnielassbeauty.com.au/#tracey"}, "employee": {"@id": "https://www.bonnielassbeauty.com.au/#tracey"}, "sameAs": ["https://www.instagram.com/bonnielassbeauty/"], "potentialAction": {"@type": "ReserveAction", "name": "Book an appointment", "target": {"@type": "EntryPoint", "urlTemplate": "https://bookings.gettimely.com/bonnielassbeauty/book", "actionPlatform": ["http://schema.org/DesktopWebPlatform", "http://schema.org/MobileWebPlatform"]}}}, {"@type": "Person", "@id": "https://www.bonnielassbeauty.com.au/#tracey", "name": "Tracey Croft", "alternateName": "Nurse Tracey", "jobTitle": "Nurse Practitioner", "description": "Endorsed Nurse Practitioner with more than thirty years in nursing, midwifery and critical care, including many years in emergency retrieval with PIPER, before moving into aesthetics. Owner and lead clinician at Bonnie Lass Beauty, Melton.", "image": "https://www.bonnielassbeauty.com.au/assets/tracey.jpg", "url": "https://www.bonnielassbeauty.com.au/#tracey", "worksFor": {"@id": "https://www.bonnielassbeauty.com.au/#clinic"}, "knowsAbout": ["Holistic care", "Perimenopausal skin", "Skin laxity after weight loss", "Collagen stimulation", "Microneedling", "Skin boosters", "Cosmetic nursing"]}, {"@type": "WebSite", "@id": "https://www.bonnielassbeauty.com.au/#website", "url": "https://www.bonnielassbeauty.com.au/", "name": "Bonnie Lass Beauty", "publisher": {"@id": "https://www.bonnielassbeauty.com.au/#clinic"}, "inLanguage": "en-AU"}, {"@type": "WebPage", "@id": "https://www.bonnielassbeauty.com.au/gallery/#webpage", "url": "https://www.bonnielassbeauty.com.au/gallery/", "name": "Client Results | Bonnie Lass Beauty", "description": "Before and after results at Bonnie Lass Beauty, Melton, are shared with clients in person at consultation, in line with Australian safety and advertising requirements.", "isPartOf": {"@id": "https://www.bonnielassbeauty.com.au/#website"}, "about": {"@id": "https://www.bonnielassbeauty.com.au/#clinic"}, "inLanguage": "en-AU", "dateModified": "2026-11-09", "breadcrumb": {"@id": "https://www.bonnielassbeauty.com.au/gallery/#breadcrumb"}}, {"@type": "BreadcrumbList", "@id": "https://www.bonnielassbeauty.com.au/gallery/#breadcrumb", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Bonnie Lass Beauty", "item": "https://www.bonnielassbeauty.com.au/"}, {"@type": "ListItem", "position": 2, "name": "Client Results", "item": "https://www.bonnielassbeauty.com.au/gallery/"}]}]}</script>
 <!-- SEO:END -->
 </head>
 <body>
 <!-- TRACKING-BODY:START -->
 <noscript><img height="1" width="1" style="display:none" alt="" src="https://www.facebook.com/tr?id=537615938096506&ev=PageView&noscript=1"></noscript>
 <!-- TRACKING-BODY:END -->
-
-<div class="bar">
   <div class="wrap">
-    <a href="../" class="brandmark" aria-label="Bonnie Lass Beauty"><img class="brandlogo brandlogo-light" src="../assets/logo-gold-white.png" alt="Bonnie Lass Beauty"><img class="brandlogo brandlogo-dark" src="../assets/logo-gold-black.png" alt=""></a>
-    <a href="../" class="back">&larr; Back to site</a>
+    <img class="logo" src="../assets/logo-gold-white.png" alt="Bonnie Lass Beauty">
+    <p class="eyebrow">Client results</p>
+    <h1>Our before and afters are shared <em>in person</em></h1>
+    <p>Australian safety and advertising requirements for prescription treatments mean we cannot show before and after images on a public website. Book a free consultation and your nurse will walk you through real results from real clients, relevant to your face and your concern.</p>
+    <a href="https://bookings.gettimely.com/bonnielassbeauty/book" class="btn btn-gold" target="_blank" rel="noopener">Book a free consultation</a>
+    <a href="../" class="btn btn-line-light">Back to the site</a>
+    <p class="note">Individual results vary and are not guaranteed. Any procedure carries risks, which will be discussed with you. This page will return you to the site shortly.</p>
   </div>
-</div>
-
-<!-- ================= GATE ================= -->
-<section class="gate" id="gate">
-  <div class="gate-card">
-    <div class="lock" aria-hidden="true">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
-        <rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/>
-      </svg>
-    </div>
-    <p class="eyebrow">Private &middot; Clients only</p>
-    <h1>Injectable <em>results</em></h1>
-    <p>
-      Enter the access code your nurse gave you at your consultation.
-    </p>
-
-    <form id="gateform">
-      <div class="pw-row">
-        <input type="password" id="pw" placeholder="Access code" autocomplete="off"
-               autocapitalize="off" spellcheck="false" aria-label="Access code">
-        <button type="submit" class="btn btn-gold" id="gatebtn">Enter</button>
-      </div>
-      <p class="gate-err" id="gateerr" role="alert"></p>
-    </form>
-
-    <p class="gate-note">
-      By entering this page you agree not to share your access code with any other parties, in
-      accordance with AHPRA guidelines and patient safety.
-      <br><br>
-      Australian law does not permit clinics to advertise before and after images of
-      prescription-only treatments to the public. This page is provided to clients following a
-      consultation, in line with AHPRA and TGA advertising requirements.
-      <br><br>
-      Don't have a code? <a href="../#assessment">Start with the free skin assessment</a> or call
-      <a href="tel:+61434710010">0434 710 010</a>.
-    </p>
-  </div>
-</section>
-
-<!-- ================= GALLERY ================= -->
-<section class="gal" id="gal">
-  <div class="wrap">
-    <div class="gal-head">
-      <p class="eyebrow">Client results</p>
-      <h1>Real faces, real <em>results</em></h1>
-      <p>
-        Welcome. Now that you have had your consultation with one of our nurses, these results are open for
-        you to see. Every image is a Bonnie Lass client, treated in our clinic and shared with their
-        written permission. No filters, no retouching, same lighting and same angle each time.
-        Results vary from person to person, and yours will depend on your face, your skin and
-        your history.
-      </p>
-    </div>
-
-    <!-- Images load here once Tracey supplies them. See gallery-data.js -->
-    <div class="ba-grid" id="bagrid"></div>
-
-    <div class="gal-empty" id="galempty">
-      <h3>Results are being added</h3>
-      <p>
-        We are preparing this gallery now. In the meantime, your nurse can walk you through relevant results in person at your appointment.
-      </p>
-    </div>
-
-    <div class="gal-cta">
-      <h2>Ready when you <em>are</em></h2>
-      <p>
-        You and your nurse have already talked through what is right for your face. When you are ready,
-        book in at the clinic - your plan is waiting, at your own pace.
-      </p>
-      <a href="https://bookings.gettimely.com/bonnielassbeauty/book" class="btn btn-gold" target="_blank" rel="noopener">Book your appointment</a>
-    </div>
-
-    <p class="compliance">
-      Images shown are of real Bonnie Lass Beauty clients, published with their written consent.
-      Individual results vary and are not guaranteed. Any procedure carries risks, which will be
-      discussed with you at consultation. A consultation with a nurse practitioner is required before
-      any treatment, and some treatments require a consultation with a medical practitioner. This
-      page does not constitute medical advice.
-    </p>
-  </div>
-</section>
-
-<script src="gallery-data.js"></script>
-<script>
-  // -------------------------------------------------------------------------
-  // ACCESS GATE
-  //
-  // GATE_ENDPOINT: a server-side check (Supabase Edge Function) that validates
-  // the code and returns signed, expiring image URLs. This is the ONLY version
-  // that genuinely protects the images.
-  //
-  // If GATE_ENDPOINT is empty, the page falls back to a local check against
-  // ACCESS_CODE. That fallback is convenience only - it does NOT hide the
-  // images from anyone who views source. Do not ship real injectable
-  // before/afters on the fallback.
-  // -------------------------------------------------------------------------
-  var GATE_ENDPOINT = "";
-  var ACCESS_CODE = "bonnielass";
-
-  var gate = document.getElementById('gate');
-  var gal = document.getElementById('gal');
-  var err = document.getElementById('gateerr');
-  var btn = document.getElementById('gatebtn');
-
-  function render(items) {
-    var grid = document.getElementById('bagrid');
-    var empty = document.getElementById('galempty');
-    if (!items || !items.length) { empty.style.display = 'block'; return; }
-    empty.style.display = 'none';
-    grid.innerHTML = items.map(function (it) {
-      return '<article class="ba">' +
-        '<div class="ba-pair">' +
-          '<figure><img src="' + it.before + '" alt="Before treatment" loading="lazy"><figcaption>Before</figcaption></figure>' +
-          '<figure><img src="' + it.after + '" alt="After treatment" loading="lazy"><figcaption>After</figcaption></figure>' +
-        '</div>' +
-        '<div class="ba-body">' +
-          '<p class="ba-meta">' + (it.meta || '') + '</p>' +
-          '<h3>' + (it.title || '') + '</h3>' +
-          '<p>' + (it.note || '') + '</p>' +
-        '</div>' +
-      '</article>';
-    }).join('');
-  }
-
-  function unlock(items) {
-    gate.style.display = 'none';
-    gal.classList.add('open');
-    render(items);
-    try { sessionStorage.setItem('blb_gal', '1'); } catch (e) {}
-    window.scrollTo(0, 0);
-  }
-
-  document.getElementById('gateform').addEventListener('submit', function (e) {
-    e.preventDefault();
-    var code = document.getElementById('pw').value.trim();
-    err.textContent = '';
-    if (!code) { err.textContent = 'Please enter your access code.'; return; }
-
-    btn.disabled = true;
-    btn.textContent = 'Checking...';
-
-    var reset = function (msg) {
-      err.textContent = msg;
-      btn.disabled = false;
-      btn.textContent = 'Enter';
-    };
-
-    if (!GATE_ENDPOINT) {
-      // Local fallback. Images are NOT protected in this mode.
-      if (code.toLowerCase() === ACCESS_CODE) {
-        unlock(window.GALLERY_ITEMS || []);
-      } else {
-        reset('That code is not right. Check with Tracey, or call 0434 710 010.');
-      }
-      return;
-    }
-
-    fetch(GATE_ENDPOINT, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ code: code })
-    })
-      .then(function (r) {
-        if (!r.ok) throw new Error('bad code');
-        return r.json();
-      })
-      .then(function (data) { unlock(data.items || []); })
-      .catch(function () {
-        reset('That code is not right. Check with Tracey, or call 0434 710 010.');
-      });
-  });
-
-  // Stay unlocked for the rest of the browsing session (local-fallback mode only).
-  try {
-    if (!GATE_ENDPOINT && sessionStorage.getItem('blb_gal') === '1') {
-      unlock(window.GALLERY_ITEMS || []);
-    }
-  } catch (e) {}
-</script>
-
 </body>
 </html>
