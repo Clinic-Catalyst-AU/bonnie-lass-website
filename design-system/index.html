@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- TRACKING:START (managed by build/inject-seo.py - set the ids in build/data.py BIZ, rerun, push) -->
+<meta name="facebook-domain-verification" content="zs2d9h7ucag7kd3a3tqd2jqjzpkxh6">
+<script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','537615938096506');fbq('track','PageView');</script>
+<!-- TRACKING:END -->
+<title>Design System | Bonnie Lass Beauty</title>
+<meta name="description" content="The Bonnie Lass Beauty website design system: colours, type, buttons, components, imagery and voice rules, with notes for building new pages in GoHighLevel.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --ink: #1B2540; --ink-soft: #3A4560; --muted: #77809A;
+    --gold: #BF9B45; --gold-deep: #8F6B2E; --gold-pale: #D8C060;
+    --ivory: #FAF8F5; --ivory-warm: #F2EEE7; --blush: #E6E2DA;
+    --line: rgba(27,37,64,0.12); --white: #FFFEFC;
+    --display: 'Cormorant Garamond', Georgia, serif;
+    --body: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
+    --wrap: 1180px; --gutter: clamp(20px, 5vw, 64px);
+  }
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--body); background: var(--ivory); color: var(--ink-soft); font-weight: 300; line-height: 1.7; font-size: 16px; }
+  h1, h2, h3, h4 { font-family: var(--display); font-weight: 400; color: var(--ink); line-height: 1.12; }
+  em { font-style: italic; }
+  a { color: var(--gold-deep); }
+  .wrap { max-width: var(--wrap); margin: 0 auto; padding-inline: var(--gutter); }
+  .eyebrow { font-size: 11px; font-weight: 500; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold-deep); margin-bottom: 20px; }
+  .eyebrow.on-dark { color: var(--gold-pale); }
+  .btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; font-family: var(--body); font-size: 12px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; text-decoration: none; padding: 19px 38px; border: 1px solid transparent; cursor: pointer; transition: all .45s cubic-bezier(.2,.7,.3,1); }
+  .btn-gold { background: var(--gold); color: #fff; } .btn-gold:hover { background: var(--gold-deep); }
+  .btn-solid { background: var(--ink); color: var(--ivory); } .btn-solid:hover { background: var(--ink-soft); }
+  .btn-line { border-color: var(--ink); color: var(--ink); background: transparent; } .btn-line:hover { background: var(--ink); color: var(--ivory); }
+  .btn-line-light { border-color: rgba(255,255,255,0.45); color: #fff; background: transparent; } .btn-line-light:hover { background: #fff; color: var(--ink); border-color: #fff; }
+
+  /* document chrome */
+  .ds-hero { background: var(--ink); color: rgba(255,253,250,0.82); padding: clamp(70px, 9vw, 120px) 0; }
+  .ds-hero h1 { color: #fff; font-size: clamp(40px, 6vw, 72px); margin-bottom: 18px; }
+  .ds-hero h1 em { color: var(--gold-pale); }
+  .ds-hero p { max-width: 640px; font-size: 17px; }
+  .ds-hero img { height: 64px; margin-bottom: 36px; }
+  .ds-nav { position: sticky; top: 0; z-index: 10; background: var(--white); border-bottom: 1px solid var(--line); }
+  .ds-nav .wrap { display: flex; flex-wrap: wrap; gap: 4px 22px; padding-block: 14px; }
+  .ds-nav a { font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink); text-decoration: none; font-weight: 500; }
+  .ds-nav a:hover { color: var(--gold-deep); }
+  section.ds { padding: clamp(60px, 8vw, 100px) 0; border-bottom: 1px solid var(--line); }
+  section.ds.alt { background: var(--ivory-warm); }
+  .ds h2 { font-size: clamp(32px, 4.2vw, 48px); margin-bottom: 14px; }
+  .ds h3 { font-size: 26px; margin: 40px 0 12px; }
+  .ds .lede { color: var(--muted); max-width: 680px; margin-bottom: 36px; }
+  .ds p + p { margin-top: 12px; }
+  .note { background: var(--white); border-left: 2px solid var(--gold); padding: 18px 22px; margin: 24px 0; font-size: 15px; }
+  .warn { border-left-color: #B5533C; }
+  code, pre { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 13px; }
+  pre { background: var(--ink); color: #E8E4DC; padding: 22px 26px; overflow: auto; line-height: 1.55; margin: 18px 0 8px; }
+  code { background: rgba(27,37,64,0.06); padding: 2px 6px; }
+  pre code { background: none; padding: 0; }
+  table { width: 100%; border-collapse: collapse; font-size: 15px; margin: 14px 0; }
+  th, td { text-align: left; padding: 12px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { font-weight: 500; color: var(--ink); font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; }
+
+  /* swatches */
+  .swatches { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 18px; }
+  .sw { background: var(--white); border: 1px solid var(--line); }
+  .sw .chip { height: 110px; }
+  .sw .meta { padding: 14px 16px 16px; font-size: 13px; }
+  .sw .meta strong { display: block; color: var(--ink); font-weight: 500; font-size: 14px; }
+  .sw .meta code { display: inline-block; margin-top: 4px; }
+  .sw .meta span { display: block; color: var(--muted); margin-top: 6px; font-size: 12px; line-height: 1.5; }
+
+  /* type specimens */
+  .spec { display: grid; grid-template-columns: 180px 1fr; gap: 28px; padding: 26px 0; border-bottom: 1px solid var(--line); align-items: baseline; }
+  .spec small { font-size: 12px; color: var(--muted); letter-spacing: 0.06em; line-height: 1.6; }
+  .spec .h1 { font-family: var(--display); font-size: clamp(40px, 6vw, 72px); color: var(--ink); line-height: 1.04; }
+  .spec .h2 { font-family: var(--display); font-size: clamp(32px, 4.4vw, 50px); color: var(--ink); line-height: 1.1; }
+  .spec .h3 { font-family: var(--display); font-size: 29px; color: var(--ink); }
+  .spec .lede-t { font-size: 18px; color: var(--muted); }
+  .spec .body-t { font-size: 16px; }
+  .spec .price-t { font-family: var(--display); font-size: 21px; color: var(--gold-deep); }
+
+  /* component demos */
+  .demo { background: var(--white); border: 1px solid var(--line); padding: 34px; margin: 18px 0 8px; }
+  .demo.dark { background: var(--ink); color: rgba(255,253,250,0.82); }
+  .demo.dark h2, .demo.dark h3 { color: #fff; }
+  .row { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+  .story-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 28px; }
+  .story { background: var(--white); border: 1px solid var(--line); overflow: hidden; display: flex; flex-direction: column; }
+  .story-img { aspect-ratio: 3/2; overflow: hidden; background: var(--blush); }
+  .story-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .story-body { padding: 32px 30px 34px; flex: 1; display: flex; flex-direction: column; }
+  .story-body h3 { font-size: 27px; margin: 0 0 8px; }
+  .story-kicker { font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold-deep); margin-bottom: 14px; }
+  .story-body p { color: var(--muted); font-size: 15px; margin-bottom: 22px; }
+  .story-link { margin-top: auto; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--gold); padding-bottom: 6px; align-self: flex-start; }
+  .tease-list { list-style: none; border-top: 1px solid var(--line); max-width: 560px; }
+  .tease-list li { display: flex; justify-content: space-between; gap: 20px; align-items: baseline; padding: 16px 0; border-bottom: 1px solid var(--line); }
+  .tease-list span { font-size: 16px; color: var(--ink); }
+  .tease-list strong { font-family: var(--display); font-size: 21px; font-weight: 400; color: var(--gold-deep); white-space: nowrap; }
+  details.faq { border-bottom: 1px solid var(--line); padding: 18px 0; max-width: 720px; }
+  details.faq summary { font-family: var(--display); font-size: 22px; color: var(--ink); cursor: pointer; list-style: none; display: flex; justify-content: space-between; gap: 20px; }
+  details.faq summary::after { content: "+"; color: var(--gold); font-size: 24px; }
+  details.faq[open] summary::after { content: "\2013"; }
+  details.faq p { margin-top: 12px; color: var(--muted); font-size: 15px; }
+  .crumbs { font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+  .crumbs span { margin: 0 8px; opacity: .5; } .crumbs em { font-style: normal; color: var(--ink); }
+  .compliance { font-size: 12.5px; color: var(--muted); line-height: 1.7; max-width: 760px; }
+  .imgs { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 12px; }
+  .imgs figure { font-size: 12px; color: var(--muted); }
+  .imgs img { width: 100%; aspect-ratio: 1; object-fit: cover; display: block; margin-bottom: 6px; }
+  .two { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; }
+  ul.plain { padding-left: 20px; } ul.plain li { margin: 6px 0; }
+  .words { display: flex; flex-wrap: wrap; gap: 8px; }
+  .words span { border: 1px solid var(--line); padding: 7px 13px; font-size: 13px; background: var(--white); }
+  .words.bad span { border-color: rgba(181,83,60,0.35); color: #8a3d2c; text-decoration: line-through; }
+  @media (max-width: 760px) { .spec, .two { grid-template-columns: 1fr; } .demo { padding: 22px; } }
+  @media print { .ds-nav { display: none; } section.ds { break-inside: avoid; } }
+</style>
+<!-- SEO:START (managed by build/inject-seo.py - edit data.py, not this block) -->
+<link rel="canonical" href="https://www.bonnielassbeauty.com.au/design-system/">
+<meta property="og:url" content="https://www.bonnielassbeauty.com.au/design-system/">
+<meta property="og:site_name" content="Bonnie Lass Beauty">
+<meta property="og:locale" content="en_AU">
+<meta property="og:image" content="https://www.bonnielassbeauty.com.au/assets/hero.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Design System | Bonnie Lass Beauty">
+<meta name="twitter:description" content="The Bonnie Lass Beauty website design system: colours, type, buttons, components, imagery and voice rules, with notes for building new pages in GoHighLevel.">
+<meta name="twitter:image" content="https://www.bonnielassbeauty.com.au/assets/hero.jpg">
+<meta name="robots" content="noindex, nofollow">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": ["MedicalBusiness", "LocalBusiness"], "@id": "https://www.bonnielassbeauty.com.au/#clinic", "name": "Bonnie Lass Beauty", "url": "https://www.bonnielassbeauty.com.au/", "description": "Nurse-led skin, wellness and cosmetic medicine clinic in Melton, Victoria, with a special interest in perimenopausal skin and skin laxity after weight loss.", "logo": {"@type": "ImageObject", "url": "https://www.bonnielassbeauty.com.au/assets/logo-gold.png"}, "image": ["https://www.bonnielassbeauty.com.au/assets/hero.jpg", "https://www.bonnielassbeauty.com.au/assets/clinic-1.jpg", "https://www.bonnielassbeauty.com.au/assets/tracey.jpg"], "telephone": "+61434710010", "email": "hello@bonnielassbeauty.com.au", "address": {"@type": "PostalAddress", "streetAddress": "44 Smith Street", "addressLocality": "Melton", "addressRegion": "VIC", "postalCode": "3337", "addressCountry": "AU"}, "hasMap": "https://www.google.com/maps?q=44+Smith+Street,+Melton+VIC+3337", "areaServed": {"@type": "City", "name": "Melton", "containedInPlace": {"@type": "AdministrativeArea", "name": "Victoria"}}, "openingHoursSpecification": [{"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"], "opens": "09:00", "closes": "19:00"}], "priceRange": "$$", "currenciesAccepted": "AUD", "paymentAccepted": "Cash, Credit Card", "founder": {"@id": "https://www.bonnielassbeauty.com.au/#tracey"}, "employee": {"@id": "https://www.bonnielassbeauty.com.au/#tracey"}, "sameAs": ["https://www.instagram.com/bonnielassbeauty/"], "potentialAction": {"@type": "ReserveAction", "name": "Book an appointment", "target": {"@type": "EntryPoint", "urlTemplate": "https://bookings.gettimely.com/bonnielassbeauty/book", "actionPlatform": ["http://schema.org/DesktopWebPlatform", "http://schema.org/MobileWebPlatform"]}}}, {"@type": "Person", "@id": "https://www.bonnielassbeauty.com.au/#tracey", "name": "Tracey Croft", "alternateName": "Nurse Tracey", "jobTitle": "Cosmetic Nurse", "description": "Registered nurse with more than thirty years in nursing, midwifery and critical care before moving into aesthetics. Owner and lead clinician at Bonnie Lass Beauty, Melton.", "image": "https://www.bonnielassbeauty.com.au/assets/tracey.jpg", "url": "https://www.bonnielassbeauty.com.au/#tracey", "worksFor": {"@id": "https://www.bonnielassbeauty.com.au/#clinic"}, "knowsAbout": ["Perimenopausal skin", "Skin laxity after weight loss", "Collagen stimulation", "Microneedling", "Skin boosters", "Cosmetic nursing"]}, {"@type": "WebSite", "@id": "https://www.bonnielassbeauty.com.au/#website", "url": "https://www.bonnielassbeauty.com.au/", "name": "Bonnie Lass Beauty", "publisher": {"@id": "https://www.bonnielassbeauty.com.au/#clinic"}, "inLanguage": "en-AU"}, {"@type": "WebPage", "@id": "https://www.bonnielassbeauty.com.au/design-system/#webpage", "url": "https://www.bonnielassbeauty.com.au/design-system/", "name": "Design System | Bonnie Lass Beauty", "description": "The Bonnie Lass Beauty website design system: colours, type, buttons, components, imagery and voice rules, with notes for building new pages in GoHighLevel.", "isPartOf": {"@id": "https://www.bonnielassbeauty.com.au/#website"}, "about": {"@id": "https://www.bonnielassbeauty.com.au/#clinic"}, "inLanguage": "en-AU", "dateModified": "2026-11-09", "breadcrumb": {"@id": "https://www.bonnielassbeauty.com.au/design-system/#breadcrumb"}}, {"@type": "BreadcrumbList", "@id": "https://www.bonnielassbeauty.com.au/design-system/#breadcrumb", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Bonnie Lass Beauty", "item": "https://www.bonnielassbeauty.com.au/"}, {"@type": "ListItem", "position": 2, "name": "Design System | Bonnie Lass Beauty", "item": "https://www.bonnielassbeauty.com.au/design-system/"}]}]}</script>
+<!-- SEO:END -->
+</head>
+<body>
+<!-- TRACKING-BODY:START -->
+<noscript><img height="1" width="1" style="display:none" alt="" src="https://www.facebook.com/tr?id=537615938096506&ev=PageView&noscript=1"></noscript>
+<!-- TRACKING-BODY:END -->
+
+<header class="ds-hero">
+  <div class="wrap">
+    <img src="https://clinic-catalyst-au.github.io/bonnie-lass-website/assets/logo-white.png" alt="Bonnie Lass Beauty">
+    <p class="eyebrow on-dark">Design system &middot; November 2026</p>
+    <h1>How the Bonnie Lass site is <em>built</em></h1>
+    <p>Every colour, typeface, button and block used on bonnielassbeauty.com.au, with the rules for adding new pages so they look and sound like the rest of the site. Built by Clinic Catalyst.</p>
+  </div>
+</header>
+
+<nav class="ds-nav"><div class="wrap">
+  <a href="#use">How to use</a><a href="#colour">Colour</a><a href="#type">Type</a><a href="#layout">Layout</a><a href="#buttons">Buttons</a><a href="#components">Components</a><a href="#imagery">Imagery</a><a href="#voice">Voice</a><a href="#pages">Pages</a><a href="#ghl">GoHighLevel</a>
+</div></nav>
+
+<section class="ds" id="use"><div class="wrap">
+  <p class="eyebrow">Start here</p>
+  <h2>Three rules that keep it <em>looking like this</em></h2>
+  <p class="lede">You do not need to be a designer. If a new page uses these colours, these two typefaces and these blocks, it will sit beside the rest of the site without anyone noticing it was added later.</p>
+  <ul class="plain">
+    <li><em>Navy, gold and ivory only.</em> No new colours. Gold is for small accents (eyebrow lines, prices, one button), never for big areas.</li>
+    <li><em>Cormorant Garamond for headings, Montserrat for everything else.</em> Headings are light, large and never bold. One italic word in a heading is the house style.</li>
+    <li><em>Concern first, treatment second.</em> Every page opens with what she sees in the mirror, in her words. Compliance notes live at the bottom of every page, not hidden.</li>
+  </ul>
+  <div class="note warn">The July brand guide listed a warm gold on near-black with teal and Open Sans. The site as approved and built uses navy, gold and ivory with Montserrat. <em>This document is the source of truth for the website.</em> The July guide still applies to voice.</div>
+</div></section>
+
+<section class="ds alt" id="colour"><div class="wrap">
+  <p class="eyebrow">Colour tokens</p>
+  <h2>Eleven colours, used <em>sparingly</em></h2>
+  <p class="lede">Ivory is the page. Navy is for text and the dark bands. Gold is a thread, not a fill.</p>
+  <div class="swatches">
+    <div class="sw"><div class="chip" style="background:#1B2540"></div><div class="meta"><strong>Ink</strong><code>#1B2540</code><span>Headings, dark bands (assessment, vouchers), solid buttons.</span></div></div>
+    <div class="sw"><div class="chip" style="background:#3A4560"></div><div class="meta"><strong>Ink soft</strong><code>#3A4560</code><span>Body text.</span></div></div>
+    <div class="sw"><div class="chip" style="background:#77809A"></div><div class="meta"><strong>Muted</strong><code>#77809A</code><span>Ledes, captions, secondary copy.</span></div></div>
+    <div class="sw"><div class="chip" style="background:#BF9B45"></div><div class="meta"><strong>Gold</strong><code>#BF9B45</code><span>Gold button, underlines, frame lines.</span></div></div>
+    <div class="sw"><div class="chip" style="background:#8F6B2E"></div><div class="meta"><strong>Gold deep</strong><code>#8F6B2E</code><span>Eyebrow text, prices, hover states on light.</span></div></div>
+    <div class="sw"><div class="chip" style="background:#D8C060"></div><div class="meta"><strong>Gold pale</strong><code>#D8C060</code><span>Eyebrow text and italics on dark bands only.</span></div></div>
+    <div class="sw"><div class="chip" style="background:#FAF8F5;border-bottom:1px solid #E6E2DA"></div><div class="meta"><strong>Ivory</strong><code>#FAF8F5</code><span>Page background.</span></div></div>
+    <div class="sw"><div class="chip" style="background:#F2EEE7"></div><div class="meta"><strong>Ivory warm</strong><code>#F2EEE7</code><span>Alternate section background (Nurse Tracey, menus).</span></div></div>
+    <div class="sw"><div class="chip" style="background:#E6E2DA"></div><div class="meta"><strong>Blush</strong><code>#E6E2DA</code><span>Image placeholders, soft dividers.</span></div></div>
+    <div class="sw"><div class="chip" style="background:#FFFEFC;border-bottom:1px solid #E6E2DA"></div><div class="meta"><strong>White</strong><code>#FFFEFC</code><span>Cards, the IV and Wellness band.</span></div></div>
+    <div class="sw"><div class="chip" style="background:rgba(27,37,64,0.12)"></div><div class="meta"><strong>Line</strong><code>rgba(27,37,64,0.12)</code><span>Every hairline rule and border.</span></div></div>
+  </div>
+</div></section>
+
+<section class="ds" id="type"><div class="wrap">
+  <p class="eyebrow">Type system</p>
+  <h2>Two typefaces, one <em>italic</em> per heading</h2>
+  <p class="lede">Google Fonts, loaded free. Cormorant Garamond weights 300 to 600 plus italics. Montserrat 300 to 600. Body copy is Montserrat 300.</p>
+  <div class="spec"><small>H1 &middot; Cormorant 400<br>40 to 72px &middot; line 1.04</small><div class="h1">Skin recovery, at your <em>own</em> pace</div></div>
+  <div class="spec"><small>H2 &middot; Cormorant 400<br>32 to 50px &middot; line 1.1</small><div class="h2">Treatments, and what they <em>honestly</em> cost</div></div>
+  <div class="spec"><small>H3 &middot; Cormorant 400 &middot; 29px</small><div class="h3">Perimenopausal skin</div></div>
+  <div class="spec"><small>Eyebrow &middot; Montserrat 500<br>11px &middot; 0.22em tracking &middot; caps</small><p class="eyebrow" style="margin:0">What we would use</p></div>
+  <div class="spec"><small>Lede &middot; Montserrat 300<br>18px &middot; muted</small><div class="lede-t">Nurse-led skin, wellness and cosmetic medicine in Melton, with a special interest in perimenopausal skin.</div></div>
+  <div class="spec"><small>Body &middot; Montserrat 300<br>16px &middot; line 1.7</small><div class="body-t">A consultation with a registered nurse is required before any procedure to assess your suitability. Individual results vary and are not guaranteed.</div></div>
+  <div class="spec"><small>Price &middot; Cormorant 400<br>21px &middot; gold deep</small><div class="price-t">from $245</div></div>
+  <div class="note">Headings use one italic word for the emphasis, set in <code>&lt;em&gt;</code>. Never bold. No all-caps headings. Australian English throughout. Hyphens with spaces, never dashes.</div>
+</div></section>
+
+<section class="ds alt" id="layout"><div class="wrap">
+  <p class="eyebrow">Layout and spacing</p>
+  <h2>Generous air, hairline <em>rules</em></h2>
+  <table>
+    <tr><th>Token</th><th>Value</th><th>Where</th></tr>
+    <tr><td>Content width</td><td>1180px</td><td>Every section's inner wrap</td></tr>
+    <tr><td>Side gutter</td><td>20px to 64px (fluid)</td><td>Left and right padding of the wrap</td></tr>
+    <tr><td>Section padding</td><td>80px to 140px top and bottom (fluid)</td><td>Homepage sections. Sub pages use 70px to 110px.</td></tr>
+    <tr><td>Two-column grid</td><td>1.05fr / 0.95fr, 40px to 84px gap</td><td>Text beside image (price tease, IV and Wellness, Nurse Tracey)</td></tr>
+    <tr><td>Card grid</td><td>auto-fit, min 320px, 28px gap</td><td>Concern cards, treatment cards</td></tr>
+    <tr><td>Mobile breakpoint</td><td>900px (grids collapse), 760px (type steps down)</td><td>All pages</td></tr>
+    <tr><td>Corners</td><td>0px</td><td>Nothing is rounded. Ever.</td></tr>
+    <tr><td>Shadows</td><td>Hover only: 0 24px 60px -30px navy at 28%</td><td>Cards lift 6px on hover</td></tr>
+  </table>
+  <h3>Section rhythm on the homepage</h3>
+  <p>Ivory hero, concern cards, <em>dark</em> assessment band, price tease, white IV and Wellness band, warm Nurse Tracey, clinic gallery, results, brands, <em>dark</em> vouchers band, FAQ, visit. Light and dark bands alternate so no two dark bands ever touch.</p>
+</div></section>
+
+<section class="ds" id="buttons"><div class="wrap">
+  <p class="eyebrow">Buttons</p>
+  <h2>Four buttons, one <em>job</em> each</h2>
+  <p class="lede">Montserrat 500, 12px, 0.16em tracking, uppercase, 19px by 38px padding, square corners. Only one gold button per screen.</p>
+  <div class="demo"><div class="row">
+    <a class="btn btn-gold" href="#">Take the free skin assessment</a>
+    <a class="btn btn-solid" href="#">See the full price menu</a>
+    <a class="btn btn-line" href="#">Not sure? Take the assessment</a>
+  </div></div>
+  <div class="demo dark"><div class="row">
+    <a class="btn btn-gold" href="#">Book an appointment</a>
+    <a class="btn btn-line-light" href="#">Read about IV &amp; Wellness</a>
+  </div></div>
+  <table>
+    <tr><th>Class</th><th>Use for</th></tr>
+    <tr><td><code>btn btn-gold</code></td><td>The one action we most want: the free assessment, or booking. One per screen.</td></tr>
+    <tr><td><code>btn btn-solid</code></td><td>Navigation-type actions on light backgrounds: see the menu, read the page.</td></tr>
+    <tr><td><code>btn btn-line</code></td><td>The quieter second choice beside a primary button.</td></tr>
+    <tr><td><code>btn btn-line-light</code></td><td>The second choice on a dark navy band.</td></tr>
+  </table>
+</div></section>
+
+<section class="ds alt" id="components"><div class="wrap">
+  <p class="eyebrow">Components</p>
+  <h2>The blocks every page is <em>made of</em></h2>
+
+  <h3>Section head</h3>
+  <div class="demo"><p class="eyebrow">What we would use</p><h2 style="margin-bottom:12px">Treatments for <em>perimenopausal skin</em></h2><p style="color:var(--muted);max-width:620px">Which of these is right for you depends entirely on your face. That is what the assessment decides.</p></div>
+
+  <h3>Concern card</h3>
+  <div class="demo"><div class="story-grid">
+    <div class="story"><div class="story-img"><img src="https://clinic-catalyst-au.github.io/bonnie-lass-website/assets/concern-perimenopause.jpg" alt=""></div><div class="story-body"><p class="story-kicker">Since menopause</p><h3>Perimenopausal skin</h3><p>Thinner, drier, slower to bounce back. Real, common, and worth understanding properly.</p><a class="story-link" href="#">Read about this</a></div></div>
+    <div class="story"><div class="story-img"><img src="https://clinic-catalyst-au.github.io/bonnie-lass-website/assets/concern-weightloss.jpg" alt=""></div><div class="story-body"><p class="story-kicker">After weight loss</p><h3>Skin laxity</h3><p>You did the hard part. Now the skin has not caught up with the rest of you.</p><a class="story-link" href="#">Read about this</a></div></div>
+  </div></div>
+
+  <h3>Price list (tease list)</h3>
+  <div class="demo"><ul class="tease-list">
+    <li><span>Collagen &amp; skin quality</span><strong>from $245</strong></li>
+    <li><span>Advanced nurse treatments</span><strong>Consultation required</strong></li>
+    <li><span>IV vitamin drips</span><strong>Tailored to you</strong></li>
+  </ul></div>
+
+  <h3>FAQ (details and summary)</h3>
+  <div class="demo">
+    <details class="faq" open><summary>Will I be pressured into booking something?</summary><p>No. Tracey will tell you when the answer is skincare and sun protection, or nothing at all right now. A consultation with no treatment is a legitimate outcome.</p></details>
+    <details class="faq"><summary>Do I have to know what I want before I come in?</summary><p>No, and most people do not. That is the entire point of the consultation.</p></details>
+  </div>
+
+  <h3>Dark call-to-action band</h3>
+  <div class="demo dark"><p class="eyebrow on-dark">Free &middot; 60 seconds &middot; No obligation</p><h2 style="margin-bottom:14px">Not sure where to <em>start</em>?</h2><p style="max-width:600px;margin-bottom:26px">Take the free skin assessment. Five questions, and a straight read on what is driving the change and what would actually help.</p><div class="row"><a class="btn btn-gold" href="#">Take the free skin assessment</a><a class="btn btn-line-light" href="#">Book an appointment</a></div></div>
+
+  <h3>Breadcrumb</h3>
+  <div class="demo"><nav class="crumbs">Home <span>/</span> Treatments <span>/</span> <em>Rejuran</em></nav></div>
+
+  <h3>Compliance note (every treatment page and every footer)</h3>
+  <div class="demo"><p class="compliance">Bonnie Lass Beauty provides cosmetic treatments under the care of a registered nurse. All procedures require a consultation to assess your individual suitability, and some require a consultation with a medical practitioner. Any procedure carries risks. Individual results vary and are not guaranteed. This website does not provide medical advice and is not a substitute for a consultation.</p></div>
+</div></section>
+
+<section class="ds" id="imagery"><div class="wrap">
+  <p class="eyebrow">Imagery</p>
+  <h2>Calm clinic, real people, <em>never</em> results</h2>
+  <p class="lede">All photography is from the Daydream shoots (January, June and August 2026). Natural light, the clinic's own florals and packs, Tracey and the team in uniform. Square corners, no filters, no stock.</p>
+  <div class="imgs">
+    <figure><img src="https://clinic-catalyst-au.github.io/bonnie-lass-website/assets/hero.jpg" alt=""><figcaption>hero.jpg &middot; homepage</figcaption></figure>
+    <figure><img src="https://clinic-catalyst-au.github.io/bonnie-lass-website/assets/tracey.jpg" alt=""><figcaption>tracey.jpg &middot; Nurse Tracey, every page</figcaption></figure>
+    <figure><img src="https://clinic-catalyst-au.github.io/bonnie-lass-website/assets/consult.jpg" alt=""><figcaption>consult.jpg &middot; price tease</figcaption></figure>
+    <figure><img src="https://clinic-catalyst-au.github.io/bonnie-lass-website/assets/iv-drip.jpg" alt=""><figcaption>iv-drip.jpg &middot; IV and Wellness</figcaption></figure>
+    <figure><img src="https://clinic-catalyst-au.github.io/bonnie-lass-website/assets/cosmelan.jpg" alt=""><figcaption>cosmelan.jpg &middot; Cosmelan page</figcaption></figure>
+    <figure><img src="https://clinic-catalyst-au.github.io/bonnie-lass-website/assets/tx-packs.jpg" alt=""><figcaption>tx-packs.jpg &middot; treatment side image</figcaption></figure>
+    <figure><img src="https://clinic-catalyst-au.github.io/bonnie-lass-website/assets/tx-reception.jpg" alt=""><figcaption>tx-reception.jpg</figcaption></figure>
+    <figure><img src="https://clinic-catalyst-au.github.io/bonnie-lass-website/assets/tx-florals.jpg" alt=""><figcaption>tx-florals.jpg</figcaption></figure>
+  </div>
+  <ul class="plain" style="margin-top:28px">
+    <li>Hero images: 4:5 or 16:9 crops, object-position centre top so faces never crop.</li>
+    <li>Card images: 3:2. Treatment side images: 4:5. Always add an alt line that names the clinic and Melton.</li>
+    <li>Export JPEG at 1400px wide, quality 80 to 85. Logo PNGs: gold on light, white on navy, black for print.</li>
+    <li>Before and after photos go in the gated gallery only, with written consent on file. Never on a public page, never in an ad.</li>
+    <li>Do not publish the lip-feature wall poster (BMT_0595). It advertises a prescription-only outcome.</li>
+  </ul>
+</div></section>
+
+<section class="ds alt" id="voice"><div class="wrap">
+  <p class="eyebrow">Voice</p>
+  <h2>A nurse who gets it, <em>not</em> a salesperson</h2>
+  <p class="lede">Calm, warm and honest. Speaks to the woman first, the skin second. "You" far more than "we". Short, unhurried sentences. The consult is a conversation, not a commitment.</p>
+  <div class="two">
+    <div><h3 style="margin-top:0">Words we use</h3><div class="words"><span>since menopause</span><span>your skin has changed</span><span>firmness</span><span>feel like yourself again</span><span>at home in your skin</span><span>a proper look</span><span>a plan that fits</span><span>honest</span><span>calm</span><span>no pressure</span><span>looked after</span><span>has a special interest in</span></div></div>
+    <div><h3 style="margin-top:0">Words we never use</h3><div class="words bad"><span>anti-ageing</span><span>transform</span><span>fix</span><span>erase</span><span>turn back the clock</span><span>look younger</span><span>best</span><span>expert</span><span>specialist</span><span>safe</span><span>painless</span><span>guaranteed</span><span>cheap</span><span>deal</span><span>any Schedule 4 product name</span></div></div>
+  </div>
+  <h3>AHPRA and TGA non-negotiables</h3>
+  <ul class="plain">
+    <li>Concern-led, never claim-led. Never promise a treatment outcome or a timeline.</li>
+    <li>Never name or price a Schedule 4 treatment in public copy. Injectable conversations happen in the room.</li>
+    <li>No testimonials about regulated treatments. No before and after as a promise.</li>
+    <li>"Has a special interest in", never "specialist" or "expert". Every treatment page carries the compliance note.</li>
+    <li>Prices are shown where they are fixed. Where a treatment is prescribed, say "consultation required" rather than "from".</li>
+  </ul>
+</div></section>
+
+<section class="ds" id="pages"><div class="wrap">
+  <p class="eyebrow">Page inventory</p>
+  <h2>Twenty-seven pages, three <em>templates</em></h2>
+  <table>
+    <tr><th>Template</th><th>Pages</th><th>Shape</th></tr>
+    <tr><td>Home</td><td>/</td><td>Hero, concern cards, assessment, price tease, IV and Wellness, Nurse Tracey, clinic, results, brands, vouchers, FAQ, visit</td></tr>
+    <tr><td>Concern (5)</td><td>perimenopausal-skin, skin-laxity-after-weight-loss, pigmentation-and-sun-damage, acne-scarring-and-texture, volume-loss-and-hollowing</td><td>Photo hero, breadcrumb, prose blocks, treatment cards, FAQ, CTA band, other concerns</td></tr>
+    <tr><td>Treatment (16)</td><td>prx-plus-bio-stimulator, byryzn-opuluxe-v, rejuran, microneedling, bio-remodelling, bio-stimulation, lifting-threads, volume-restoring, prp-facial, fine-lines-and-wrinkles, hair-rejuvenation, fat-dissolving, tmj-and-teeth-grinding, hyperhidrosis, cosmelan, iv-and-wellness</td><td>Text hero with facts strip, prose blocks, pricing tiers aside, related concerns, CTA band</td></tr>
+    <tr><td>Utility (5)</td><td>treatments (price menu), gallery (gated), thank-you, privacy, terms</td><td>Text hero plus content</td></tr>
+  </table>
+  <p>Every page carries the same header, footer, compliance note, tracking and schema. New treatment pages follow the treatment template exactly: what it is, who it suits, what a course looks like, what you can expect, pricing or consultation required, then the compliance note.</p>
+</div></section>
+
+<section class="ds alt" id="ghl"><div class="wrap">
+  <p class="eyebrow">GoHighLevel</p>
+  <h2>Building new pages in GHL so they <em>match</em></h2>
+  <p class="lede">The site runs on one stylesheet. Load it once at site level in GHL and every new page inherits the tokens, buttons and blocks above.</p>
+  <h3>1. Site-level header code</h3>
+  <p>Sites &gt; Settings &gt; Head tracking code. Paste the font link and the stylesheet link, then the tokens block so GHL elements can use the variables too.</p>
+<pre><code>&lt;link rel="preconnect" href="https://fonts.googleapis.com"&gt;
+&lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin&gt;
+&lt;link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&amp;family=Montserrat:wght@300;400;500;600&amp;display=swap" rel="stylesheet"&gt;
+&lt;link rel="stylesheet" href="https://www.bonnielassbeauty.com.au/assets/site.css"&gt;
+&lt;style&gt;
+:root{--ink:#1B2540;--ink-soft:#3A4560;--muted:#77809A;--gold:#BF9B45;--gold-deep:#8F6B2E;--gold-pale:#D8C060;
+--ivory:#FAF8F5;--ivory-warm:#F2EEE7;--blush:#E6E2DA;--line:rgba(27,37,64,0.12);--white:#FFFEFC;
+--display:'Cormorant Garamond',Georgia,serif;--body:'Montserrat',sans-serif;}
+&lt;/style&gt;</code></pre>
+  <h3>2. GHL element settings</h3>
+  <table>
+    <tr><th>GHL element</th><th>Set it to</th></tr>
+    <tr><td>Page background</td><td>#FAF8F5 (ivory). Alternate sections #F2EEE7. Dark bands #1B2540.</td></tr>
+    <tr><td>Headline</td><td>Cormorant Garamond, 400, colour #1B2540, size 48 desktop / 34 mobile, line height 1.1</td></tr>
+    <tr><td>Sub headline (eyebrow)</td><td>Montserrat, 500, 11px, letter spacing 3px, uppercase, colour #8F6B2E</td></tr>
+    <tr><td>Paragraph</td><td>Montserrat, 300, 16px, line height 1.7, colour #3A4560. Ledes 18px in #77809A.</td></tr>
+    <tr><td>Primary button</td><td>Background #BF9B45, text #FFFFFF, Montserrat 500 12px, letter spacing 2px, uppercase, padding 19 by 38, radius 0, hover #8F6B2E</td></tr>
+    <tr><td>Secondary button</td><td>Transparent, 1px border #1B2540, text #1B2540, same type, radius 0, hover fill #1B2540 with ivory text</td></tr>
+    <tr><td>Section padding</td><td>110 top and bottom desktop, 70 mobile. Row width 1180.</td></tr>
+    <tr><td>Images</td><td>Radius 0, no borders, no shadows</td></tr>
+    <tr><td>Dividers</td><td>1px, rgba(27,37,64,0.12)</td></tr>
+  </table>
+  <h3>3. Custom values already in this GHL</h3>
+  <p><code>{{custom_values.booking_link}}</code> and <code>{{custom_values.consult_link}}</code> both resolve to the Timely booking page. Use them on every button so a link change happens once.</p>
+  <h3>4. Tracking already wired</h3>
+  <p>Meta pixel, Meta domain verification, Google Tag Manager GTM-5XDVCDC and GA4 are documented in the site build. Do not add a second pixel or GA tag inside a page. Everything goes at site level.</p>
+  <div class="note">New page checklist: eyebrow, one italic word in the H1, concern-led opening paragraph, one gold button, breadcrumb, compliance note at the bottom, alt text that names Melton, title under 60 characters with Melton in it.</div>
+</div></section>
+
+<footer style="padding:50px 0;text-align:center;font-size:12px;color:var(--muted)">Bonnie Lass Beauty design system &middot; Clinic Catalyst &middot; November 2026</footer>
+</body>
+</html>
