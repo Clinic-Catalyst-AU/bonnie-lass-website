@@ -83,20 +83,20 @@ header.solid, header.scrolled {
 }
 .brandmark em { color: var(--gold-deep); }
 
-.nav-links { display: flex; align-items: center; gap: 30px; }
+.nav-links { display: flex; align-items: center; gap: 20px; }
 .nav-links a {
-  font-size: 12px; letter-spacing: 0.13em; text-transform: uppercase;
+  font-size: 11.5px; letter-spacing: 0.11em; text-transform: uppercase;
   color: var(--ink-soft); text-decoration: none; transition: color .35s ease; white-space: nowrap;
 }
 .nav-links a:hover { color: var(--gold-deep); }
 
 .nav-cta {
-  font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase;
-  padding: 13px 26px; border: 1px solid var(--ink); color: var(--ink);
+  font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase;
+  padding: 12px 18px; border: 1px solid var(--ink); color: var(--ink);
   text-decoration: none; transition: all .4s ease; white-space: nowrap;
 }
 .nav-cta:hover { background: var(--ink); color: var(--ivory); }
-.nav-cta-gift { margin-right: 10px; }
+.nav-cta-gift { margin-right: 8px; margin-left: 8px; }
 .nav-mobile-only { display: none; }
 
 .burger { display: none; background: none; border: 0; cursor: pointer; padding: 8px; }
